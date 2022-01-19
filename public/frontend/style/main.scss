@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 .navbar {
     background-color: #dadada;
 }
@@ -48,6 +49,111 @@
         a:hover,
         a:focus {
             color: $navbar-light-active-color;
+=======
+* {
+    font-family: 'Montserrat', sans-serif;
+}
+
+.navbar {
+    background-color: #DADADA;
+
+    .nav-item {
+        padding-right: 50px;
+
+        .nav-link {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 18px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: 22px;
+
+            &.active {
+                color: #AA9359;
+                font-family: 'Montserrat', sans-serif;
+                font-size: 18px;
+                font-style: normal;
+                font-weight: 600;
+                line-height: 22px;
+
+            }
+
+            &:hover {
+                color: #AA9359;
+                font-family: 'Montserrat', sans-serif;
+                font-size: 18px;
+                font-style: normal;
+                line-height: 22px;
+            }
+
+        }
+    }
+
+
+    .btn-login {
+        border: 2px solid #0B0B0B;
+        box-sizing: border-box;
+        border-radius: 5px;
+    }
+}
+
+
+.section-main-page {
+    background-image: url('../images/background.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: top center;
+    height: 600px;
+
+    .section-content {
+        .section-main-inner {
+            padding-left: 147px;
+
+            .text-new-arrival {
+                color: #515151;
+                font-family: 'Montserrat', sans-serif;
+                font-size: 24px;
+                font-style: normal;
+                font-weight: 400;
+                line-height: 29px;
+                padding-top: 156px;
+
+
+            }
+
+            .text-confort-chair {
+                font-family: Montserrat;
+                font-size: 36px;
+                font-style: normal;
+                font-weight: 700;
+                line-height: 44px;
+                letter-spacing: 0em;
+                text-align: left;
+                color: #464646;
+                padding-top: 17px;
+
+            }
+
+            p {
+                font-family: 'Montserrat', sans-serif;
+                font-size: 18px;
+                font-style: normal;
+                font-weight: 400;
+                line-height: 22px;
+            }
+
+            .btn-buy-now {
+                margin-top: 17px;
+                border: 2px solid #0B0B0B;
+                box-sizing: border-box;
+                padding: 14px 75px;
+                font-family: 'Montserrat', sans-serif;
+                font-size: 18px;
+                font-style: normal;
+                font-weight: 600;
+                line-height: 22px;
+
+            }
+>>>>>>> 984be6e934d41ae30bfcb93320cc2800eb58129d
         }
     }
 }
