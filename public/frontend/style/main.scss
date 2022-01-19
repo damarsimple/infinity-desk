@@ -1,0 +1,53 @@
+.navbar {
+    background-color: #dadada;
+}
+
+.navbar-light {
+    .navbar-brand {
+        color: $navbar-light-brand-color;
+
+        &:hover,
+        &:focus {
+            color: $navbar-light-brand-hover-color;
+        }
+    }
+
+    .navbar-nav {
+        .nav-link {
+            color: $navbar-light-color;
+
+            &:hover,
+            &:focus {
+                color: $navbar-light-hover-color;
+            }
+
+            &.disabled {
+                color: $navbar-light-disabled-color;
+            }
+        }
+
+        .show > .nav-link,
+        .nav-link.active {
+            color: #dadada;
+        }
+    }
+
+    .navbar-toggler {
+        color: $navbar-light-color;
+        border-color: $navbar-light-toggler-border-color;
+    }
+
+    .navbar-toggler-icon {
+        background-image: escape-svg($navbar-light-toggler-icon-bg);
+    }
+
+    .navbar-text {
+        color: $navbar-light-color;
+
+        a,
+        a:hover,
+        a:focus {
+            color: $navbar-light-active-color;
+        }
+    }
+}

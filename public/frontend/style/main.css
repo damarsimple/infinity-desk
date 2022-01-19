@@ -1,1 +1,8 @@
-/* No CSS *//*# sourceMappingURL=main.css.map */
+.navbar {
+  background-color: #dadada;
+}
+
+.navbar-nav .nav-item .nav-link.active {
+  color: #aa9359;
+}
+/*# sourceMappingURL=main.css.map */
