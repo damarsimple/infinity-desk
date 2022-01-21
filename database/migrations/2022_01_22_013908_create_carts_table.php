@@ -21,7 +21,7 @@ class CreateCartsTable extends Migration
             $table->string('customization')->nullable();
             $table->foreignId('user_id')->constrained();
             $table->foreignId('product_id')->constrained();
-            $table->foreignId('procurement_id')->constrained();
+            $table->foreignId('procurement_id')->nullable();
 
             $table->unsignedInteger('price');
             $table->string('price_type');
