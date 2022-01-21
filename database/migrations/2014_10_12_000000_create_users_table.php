@@ -21,6 +21,12 @@ class CreateUsersTable extends Migration
             $table->string('password');
             $table->rememberToken();
             $table->timestamps();
+
+            $table->boolean('is_seller')->default(false);
+            $table->boolean('is_admin')->default(false);
+            $table->string('seller_name')->nullable();
+            $table->string('address')->nullable();
+            $table->string('bank_detail');
         });
     }
 
