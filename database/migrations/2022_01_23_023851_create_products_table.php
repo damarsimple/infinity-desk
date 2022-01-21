@@ -18,10 +18,13 @@ class CreateProductsTable extends Migration
             $table->string('name');
             $table->string('code');
             $table->string('serial');
+
+            $table->string('materials')->nullable();
             $table->array('images')->nullable();
             $table->array('colors')->nullable();
             $table->array('sizes')->nullable();
             $table->array('types')->nullable();
+
             $table->string('description')->nullable();
 
             $table->foreignId('seller_id')->constrained('users');
