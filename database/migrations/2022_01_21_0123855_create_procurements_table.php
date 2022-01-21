@@ -15,13 +15,20 @@ class CreateProcurementsTable extends Migration
     {
         Schema::create('procurements', function (Blueprint $table) {
             $table->id();
-            $table->string('address');
+
+            $table->string('notes')->nullable();
+
             $table->string('status');
-            $table->string('payment_status');
+
+            $table->string('payment_status'); // from payment provider
             $table->string('payment_method');
 
             $table->foreignId('user_id')->constrained();
             $table->foreignId('seller_id')->constrained('users');
+
+            $table->string('shipping_method');
+            $table->string('shipping_status'); // from shipping provider
+            $table->string('shipping_address');
 
             $table->timestamps();
         });

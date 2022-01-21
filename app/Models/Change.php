@@ -4,9 +4,8 @@ namespace App\Models;
 
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
-use Trackable;
 
-class Procurement extends Model
+class Change extends Model
 {
     use HasFactory;
 
@@ -15,8 +14,8 @@ class Procurement extends Model
         return $this->belongsTo(User::class);
     }
 
-    public function seller()
+    public function changeable()
     {
-        return $this->belongsTo(User::class);
+        return $this->morphTo();
     }
 }
