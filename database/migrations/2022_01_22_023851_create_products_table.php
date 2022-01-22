@@ -20,10 +20,10 @@ class CreateProductsTable extends Migration
             $table->string('serial');
 
             $table->string('materials')->nullable();
-            $table->array('images')->nullable();
-            $table->array('colors')->nullable();
-            $table->array('sizes')->nullable();
-            $table->array('types')->nullable();
+            $table->json('images')->nullable();
+            $table->json('colors')->nullable();
+            $table->json('sizes')->nullable();
+            $table->json('types')->nullable();
 
             $table->string('description')->nullable();
 

@@ -18,7 +18,7 @@ class CreatePromosTable extends Migration
 
             $table->string('name');
 
-            $table->array('constraint');
+            $table->json('constraint');
 
             $table->float('value');
             $table->string('type'); // percent or fixed
