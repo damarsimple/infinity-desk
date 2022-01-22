@@ -1,5 +1,7 @@
 <?php
 
+namespace App\Trait;
+
 use App\Models\Change;
 
 trait Trackable
