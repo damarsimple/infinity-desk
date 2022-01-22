@@ -26,7 +26,7 @@ class CreateUsersTable extends Migration
             $table->boolean('is_admin')->default(false);
             $table->string('seller_name')->nullable();
             $table->string('address')->nullable();
-            $table->string('bank_detail');
+            $table->string('bank_detail')->nullable();
         });
     }
 

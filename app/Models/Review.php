@@ -4,11 +4,10 @@ namespace App\Models;
 
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
-use Trackable;
 
 class Review extends Model
 {
-    use HasFactory, Trackable;
+    use HasFactory;
 
     public function product()
     {

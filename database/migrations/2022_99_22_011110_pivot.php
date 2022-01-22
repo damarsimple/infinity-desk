@@ -10,9 +10,15 @@ class Pivot extends Migration
     public const SCHEMA = [
         [
             'name' => 'Category and Product Pivot',
-            'key' => ['product_id', 'category_id']
+            'key' => ['product', 'category']
         ]
     ];
+
+    public function getTableName(array $schema): string
+    {
+        sort($schema['key']);
+        return implode('_', $schema['key']);
+    }
 
     /**
      * Run the migrations.
@@ -23,11 +29,11 @@ class Pivot extends Migration
     {
 
         foreach (self::SCHEMA as $schema) {
-            Schema::create($schema['name'], function (Blueprint $table) use ($schema) {
+            print('Creating table '  . $this->getTableName($schema) . '...' . PHP_EOL);
+            Schema::create($this->getTableName($schema), function (Blueprint $table) use ($schema) {
                 $table->id();
-
                 foreach ($schema['key'] as $key) {
-                    $table->foreignId($key)->constrained();
+                    $table->foreignId($key . '_id')->constrained();
                 }
 
                 $table->timestamps();
@@ -44,7 +50,7 @@ class Pivot extends Migration
     {
 
         foreach (self::SCHEMA as $schema) {
-            Schema::dropIfExists($schema['name']);
+            Schema::dropIfExists($this->getTableName($schema));
         }
     }
 }
