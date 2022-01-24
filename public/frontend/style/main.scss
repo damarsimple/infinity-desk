@@ -1,159 +1,412 @@
-<<<<<<< HEAD
+// /===== VARIABLES CSS =====/
+:root {
+    // /===== Colores =====/
+    --bg-color1: #f2f2f2;
+    --bg-color2: #b3b3b5;
+    --bg-color3: #dadada;
+    --primary-color: #aa9359;
+    --primary-text: #aa9359;
+    --secondary-color: #c4c4c4;
+    --secondary-text: #c4c4c4;
+    --tried-text: #464646;
+    --alert: #ff8181;
+    // /===== Fuente y tipografia =====/
+    --body-font: "Montserrat", sans-serif;
+    --h1-font-size: 1.5rem;
+    --h2-font-size: 1.25rem;
+    --normal-font-size: 1rem;
+    --small-font-size: 0.875rem;
+}
+
+// /===== BASE =====/
+*,
+::before,
+::after {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    background-color: var(--bg-color1);
+    font-family: var(--body-font);
+    font-size: var(--normal-font-size);
+}
+
+//navabr
 .navbar {
     background-color: #dadada;
-}
 
-.navbar-light {
     .navbar-brand {
-        color: $navbar-light-brand-color;
-
-        &:hover,
-        &:focus {
-            color: $navbar-light-brand-hover-color;
-        }
+        width: 50px;
     }
-
-    .navbar-nav {
-        .nav-link {
-            color: $navbar-light-color;
-
-            &:hover,
-            &:focus {
-                color: $navbar-light-hover-color;
-            }
-
-            &.disabled {
-                color: $navbar-light-disabled-color;
-            }
-        }
-
-        .show > .nav-link,
-        .nav-link.active {
-            color: #dadada;
-        }
-    }
-
-    .navbar-toggler {
-        color: $navbar-light-color;
-        border-color: $navbar-light-toggler-border-color;
-    }
-
-    .navbar-toggler-icon {
-        background-image: escape-svg($navbar-light-toggler-icon-bg);
-    }
-
-    .navbar-text {
-        color: $navbar-light-color;
-
-        a,
-        a:hover,
-        a:focus {
-            color: $navbar-light-active-color;
-=======
-* {
-    font-family: 'Montserrat', sans-serif;
-}
-
-.navbar {
-    background-color: #DADADA;
 
     .nav-item {
         padding-right: 50px;
 
         .nav-link {
-            font-family: 'Montserrat', sans-serif;
             font-size: 18px;
             font-style: normal;
             font-weight: 400;
             line-height: 22px;
 
             &.active {
-                color: #AA9359;
-                font-family: 'Montserrat', sans-serif;
+                color: #aa9359;
                 font-size: 18px;
                 font-style: normal;
                 font-weight: 600;
                 line-height: 22px;
-
             }
 
             &:hover {
-                color: #AA9359;
-                font-family: 'Montserrat', sans-serif;
+                color: #aa9359;
                 font-size: 18px;
                 font-style: normal;
                 line-height: 22px;
             }
-
         }
     }
 
-
     .btn-login {
-        border: 2px solid #0B0B0B;
+        border: 2px solid #0b0b0b;
         box-sizing: border-box;
         border-radius: 5px;
     }
 }
 
+//carousel
+.carousel {
+    height: 700px;
 
-.section-main-page {
-    background-image: url('../images/background.png');
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: top center;
-    height: 600px;
+    .carousel-main-inner {
+        padding: 200px 0 0 147px;
 
-    .section-content {
-        .section-main-inner {
-            padding-left: 147px;
-
+        .carousel-text {
             .text-new-arrival {
-                color: #515151;
-                font-family: 'Montserrat', sans-serif;
                 font-size: 24px;
                 font-style: normal;
                 font-weight: 400;
                 line-height: 29px;
-                padding-top: 156px;
-
-
+                color: #515151;
             }
 
-            .text-confort-chair {
-                font-family: Montserrat;
+            .text-comfort-chair {
+                padding-top: 17px;
                 font-size: 36px;
                 font-style: normal;
                 font-weight: 700;
                 line-height: 44px;
-                letter-spacing: 0em;
-                text-align: left;
                 color: #464646;
-                padding-top: 17px;
-
             }
 
             p {
-                font-family: 'Montserrat', sans-serif;
                 font-size: 18px;
                 font-style: normal;
                 font-weight: 400;
                 line-height: 22px;
+                color: #515151;
+                padding-top: 10px;
             }
 
-            .btn-buy-now {
-                margin-top: 17px;
-                border: 2px solid #0B0B0B;
-                box-sizing: border-box;
-                padding: 14px 75px;
-                font-family: 'Montserrat', sans-serif;
-                font-size: 18px;
-                font-style: normal;
-                font-weight: 600;
-                line-height: 22px;
-
+            button {
+                &.btn-buy-now {
+                    margin-top: 35px;
+                    padding: 15px 70px;
+                    border: 2px solid #0b0b0b;
+                    box-sizing: border-box;
+                    font-size: 18px;
+                    font-style: normal;
+                    font-weight: 600;
+                    line-height: 22px;
+                    color: #515151;
+                }
             }
->>>>>>> 984be6e934d41ae30bfcb93320cc2800eb58129d
         }
+    }
+}
+
+//product category
+#product-category {
+    .card-group {
+        .card {
+            margin: 0 auto;
+            border: none;
+        }
+    }
+}
+
+.card-group {
+    .card {
+        background-color: #f2f2f2;
+    }
+}
+
+h1,
+p {
+    margin: 0;
+}
+
+a {
+    text-decoration: none;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+// /===== CARD =====/
+.card-product {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--bg-color1);
+}
+
+.card {
+    width: 320px;
+    height: 400px;
+    background-color: var(--bg-color1);
+    border-radius: 1rem;
+    padding: 2rem 1rem 0;
+    color: var(--primary-text);
+    overflow-y: hidden;
+}
+
+.card__img {
+    position: inherit;
+    padding-left: inherit;
+    width: 260px;
+    filter: drop-shadow(5px 10px 15px rgba(8, 9, 13, 0.4));
+}
+
+.card__data {
+    transform: translateY(13.2rem);
+    text-align: center;
+}
+
+.card__title {
+    font-size: var(--h1-font-size);
+    color: var(--tried-text);
+    margin-bottom: 0.5rem;
+}
+
+.card__preci {
+    display: inline-block;
+    font-size: var(--h2-font-size);
+    font-weight: 500;
+    margin-bottom: 1.25rem;
+}
+
+.card__description {
+    font-size: var(--small-font-size);
+    text-align: initial;
+    margin-bottom: 1.25rem;
+    opacity: 0;
+}
+
+.card__button {
+    display: block;
+    width: max-content;
+    padding: 1.125rem 2rem;
+    background-color: linear-gradient(to right, #09c6f9, #045de9);
+    color: var(--tried-text);
+    border-radius: 0.5rem;
+    font-weight: 600;
+    transition: 0.2s;
+    opacity: 0;
+
+    &:hover {
+        box-shadow: 0 18px 40px -12px rgba(242, 162, 12, 0.35);
+    }
+}
+
+.card__description {
+    color: var(--secondary-text);
+    transition: 0.5s;
+}
+
+/* Hover card effect */
+
+.card {
+    &:hover {
+        .card__img {
+            transform: translate(-1.5rem, -9.5rem) rotate(-20deg);
+            transition: 0.5s;
+        }
+
+        .card__data {
+            text-align: center;
+            transform: translateY(-100px);
+            transition: 0.5s;
+        }
+
+        .card__title {
+            // transform: translateX(-2.3rem);
+            margin-bottom: 0;
+            transition: 0.5s;
+        }
+
+        .card__description {
+            text-align: center;
+        }
+    }
+
+    .card__description,
+    .card__button {
+        transition-delay: 0.2s;
+        opacity: 1;
+    }
+}
+
+footer {
+    background: var(--bg-color3);
+    padding: 32px 0;
+    text-align: center;
+    color: var(--secondary-text);
+    font-size: 12px;
+}
+
+// Login
+.section-login {
+    background: rgba(150, 150, 150, 0.72);
+    position: relative;
+    height: 100vh;
+
+    &::before {
+        background-image: url("../img/login_background.png");
+        background-position: top center;
+        background-size: cover;
+        background-repeat: no-repeat;
+        width: 100%;
+        height: 100%;
+        content: "";
+        opacity: 1;
+        position: absolute;
+        z-index: -1;
+    }
+
+    .form-login {
+        max-width: 1028px;
+        margin: 0 auto;
+        padding-top: 50px;
+
+        img {
+            height: 100%;
+        }
+
+        .login-body {
+            .login-title {
+                padding: 72px 0 77px;
+                line-height: 44px;
+                font-size: 36px;
+                font-style: normal;
+                font-weight: 700;
+            }
+
+            .login-inner {
+                width: 320px;
+                margin: 0 auto;
+
+                .btn-login {
+                    margin: 50px 0 20px;
+                    border: 2px solid #000000;
+                    box-sizing: border-box;
+                    border-radius: 5px;
+                    width: 100%;
+
+                    &:hover {
+                        background-color: #000000;
+                        color: #ffffff;
+                    }
+                }
+
+                input {
+                    background: #f4f4f4;
+                }
+
+                a {
+                    &.sign-up {
+                        text-align: center;
+                        font-size: 14px;
+                        font-style: normal;
+                        font-weight: 500;
+                        line-height: 17px;
+                        color: #000000;
+
+                        &:hover {
+                            text-decoration: underline;
+                        }
+
+                        span {
+                            font-weight: 700;
+                        }
+                    }
+                }
+            }
+        }
+
+        .email-login,
+        .pass-login {
+            outline: none;
+            border: 1px solid #ffffff;
+            background-color: #f4f4f4;
+            padding: 10px 10px 10px 10px;
+            font-size: 14px;
+            color: #000000;
+            display: block;
+            width: 100%;
+        }
+
+        .login-form-grids {
+            width: 45%;
+            padding: 3rem;
+            margin: 3rem auto 0;
+            background-color: #ffffff;
+
+            .pass-login {
+                margin: 1rem 0 0;
+            }
+
+            .testd {
+                outline: none;
+                border: none;
+                padding: 10px 0;
+                font-size: 1rem;
+            }
+        }
+
+        .testd {
+            background-color: #f4f4f4;
+            color: #000000;
+        }
+    }
+}
+
+@media (max-width: 767px) {
+    .section-login {
+        background-image: none;
+        background-color: #ffffff;
+    }
+}
+// --end Login--
+.form-control {
+    background-color: var(--bg-color3);
+    color: #000000;
+}
+
+// --Register--
+.input-single {
+    margin: 50px 0 20px;
+    border: 2px solid #000000;
+    padding-top: 00.5rem;
+    padding-bottom: 00.5rem;
+    box-sizing: border-box;
+    border-radius: 5px;
+    width: 100%;
+
+    &:hover {
+        background-color: #000000;
+        color: #ffffff;
     }
 }

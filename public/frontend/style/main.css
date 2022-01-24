@@ -1,17 +1,41 @@
-<<<<<<< HEAD
+:root {
+  --bg-color1: #f2f2f2;
+  --bg-color2: #b3b3b5;
+  --bg-color3: #dadada;
+  --primary-color: #aa9359;
+  --primary-text: #aa9359;
+  --secondary-color: #c4c4c4;
+  --secondary-text: #c4c4c4;
+  --tried-text: #464646;
+  --alert: #ff8181;
+  --body-font: "Montserrat", sans-serif;
+  --h1-font-size: 1.5rem;
+  --h2-font-size: 1.25rem;
+  --normal-font-size: 1rem;
+  --small-font-size: 0.875rem;
+}
+
+*,
+::before,
+::after {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  background-color: var(--bg-color1);
+  font-family: var(--body-font);
+  font-size: var(--normal-font-size);
+}
+
 .navbar {
   background-color: #dadada;
 }
 
-.navbar-nav .nav-item .nav-link.active {
-  color: #aa9359;
-=======
-* {
-  font-family: 'Montserrat', sans-serif;
-}
-
-.navbar {
-  background-color: #DADADA;
+.navbar .navbar-brand {
+  width: 50px;
 }
 
 .navbar .nav-item {
@@ -19,7 +43,6 @@
 }
 
 .navbar .nav-item .nav-link {
-  font-family: 'Montserrat', sans-serif;
   font-size: 18px;
   font-style: normal;
   font-weight: 400;
@@ -27,8 +50,7 @@
 }
 
 .navbar .nav-item .nav-link.active {
-  color: #AA9359;
-  font-family: 'Montserrat', sans-serif;
+  color: #aa9359;
   font-size: 18px;
   font-style: normal;
   font-weight: 600;
@@ -36,73 +58,350 @@
 }
 
 .navbar .nav-item .nav-link:hover {
-  color: #AA9359;
-  font-family: 'Montserrat', sans-serif;
+  color: #aa9359;
   font-size: 18px;
   font-style: normal;
   line-height: 22px;
 }
 
 .navbar .btn-login {
-  border: 2px solid #0B0B0B;
+  border: 2px solid #0b0b0b;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
   border-radius: 5px;
 }
 
-.section-main-page {
-  background-image: url("../images/background.png");
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: top center;
-  height: 600px;
+.carousel {
+  height: 700px;
 }
 
-.section-main-page .section-content .section-main-inner {
-  padding-left: 147px;
+.carousel .carousel-main-inner {
+  padding: 200px 0 0 147px;
 }
 
-.section-main-page .section-content .section-main-inner .text-new-arrival {
-  color: #515151;
-  font-family: 'Montserrat', sans-serif;
+.carousel .carousel-main-inner .carousel-text .text-new-arrival {
   font-size: 24px;
   font-style: normal;
   font-weight: 400;
   line-height: 29px;
-  padding-top: 156px;
+  color: #515151;
 }
 
-.section-main-page .section-content .section-main-inner .text-confort-chair {
-  font-family: Montserrat;
+.carousel .carousel-main-inner .carousel-text .text-comfort-chair {
+  padding-top: 17px;
   font-size: 36px;
   font-style: normal;
   font-weight: 700;
   line-height: 44px;
-  letter-spacing: 0em;
-  text-align: left;
   color: #464646;
-  padding-top: 17px;
 }
 
-.section-main-page .section-content .section-main-inner p {
-  font-family: 'Montserrat', sans-serif;
+.carousel .carousel-main-inner .carousel-text p {
   font-size: 18px;
   font-style: normal;
   font-weight: 400;
   line-height: 22px;
+  color: #515151;
+  padding-top: 10px;
 }
 
-.section-main-page .section-content .section-main-inner .btn-buy-now {
-  margin-top: 17px;
-  border: 2px solid #0B0B0B;
+.carousel .carousel-main-inner .carousel-text button.btn-buy-now {
+  margin-top: 35px;
+  padding: 15px 70px;
+  border: 2px solid #0b0b0b;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
-  padding: 14px 75px;
-  font-family: 'Montserrat', sans-serif;
   font-size: 18px;
   font-style: normal;
   font-weight: 600;
   line-height: 22px;
->>>>>>> 984be6e934d41ae30bfcb93320cc2800eb58129d
+  color: #515151;
+}
+
+#product-category .card-group .card {
+  margin: 0 auto;
+  border: none;
+}
+
+.card-group .card {
+  background-color: #f2f2f2;
+}
+
+h1,
+p {
+  margin: 0;
+}
+
+a {
+  text-decoration: none;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+.card-product {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background-color: var(--bg-color1);
+}
+
+.card {
+  width: 320px;
+  height: 400px;
+  background-color: var(--bg-color1);
+  border-radius: 1rem;
+  padding: 2rem 1rem 0;
+  color: var(--primary-text);
+  overflow-y: hidden;
+}
+
+.card__img {
+  position: inherit;
+  padding-left: inherit;
+  width: 260px;
+  -webkit-filter: drop-shadow(5px 10px 15px rgba(8, 9, 13, 0.4));
+          filter: drop-shadow(5px 10px 15px rgba(8, 9, 13, 0.4));
+}
+
+.card__data {
+  -webkit-transform: translateY(13.2rem);
+          transform: translateY(13.2rem);
+  text-align: center;
+}
+
+.card__title {
+  font-size: var(--h1-font-size);
+  color: var(--tried-text);
+  margin-bottom: 0.5rem;
+}
+
+.card__preci {
+  display: inline-block;
+  font-size: var(--h2-font-size);
+  font-weight: 500;
+  margin-bottom: 1.25rem;
+}
+
+.card__description {
+  font-size: var(--small-font-size);
+  text-align: initial;
+  margin-bottom: 1.25rem;
+  opacity: 0;
+}
+
+.card__button {
+  display: block;
+  width: -webkit-max-content;
+  width: -moz-max-content;
+  width: max-content;
+  padding: 1.125rem 2rem;
+  background-color: linear-gradient(to right, #09c6f9, #045de9);
+  color: var(--tried-text);
+  border-radius: 0.5rem;
+  font-weight: 600;
+  -webkit-transition: 0.2s;
+  transition: 0.2s;
+  opacity: 0;
+}
+
+.card__button:hover {
+  -webkit-box-shadow: 0 18px 40px -12px rgba(242, 162, 12, 0.35);
+          box-shadow: 0 18px 40px -12px rgba(242, 162, 12, 0.35);
+}
+
+.card__description {
+  color: var(--secondary-text);
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+}
+
+/* Hover card effect */
+.card:hover .card__img {
+  -webkit-transform: translate(-1.5rem, -9.5rem) rotate(-20deg);
+          transform: translate(-1.5rem, -9.5rem) rotate(-20deg);
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+}
+
+.card:hover .card__data {
+  text-align: center;
+  -webkit-transform: translateY(-100px);
+          transform: translateY(-100px);
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+}
+
+.card:hover .card__title {
+  margin-bottom: 0;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+}
+
+.card:hover .card__description {
+  text-align: center;
+}
+
+.card .card__description,
+.card .card__button {
+  -webkit-transition-delay: 0.2s;
+          transition-delay: 0.2s;
+  opacity: 1;
+}
+
+footer {
+  background: var(--bg-color3);
+  padding: 32px 0;
+  text-align: center;
+  color: var(--secondary-text);
+  font-size: 12px;
+}
+
+.section-login {
+  background: rgba(150, 150, 150, 0.72);
+  position: relative;
+  height: 100vh;
+}
+
+.section-login::before {
+  background-image: url("../img/login_background.png");
+  background-position: top center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  width: 100%;
+  height: 100%;
+  content: "";
+  opacity: 1;
+  position: absolute;
+  z-index: -1;
+}
+
+.section-login .form-login {
+  max-width: 1028px;
+  margin: 0 auto;
+  padding-top: 50px;
+}
+
+.section-login .form-login img {
+  height: 100%;
+}
+
+.section-login .form-login .login-body .login-title {
+  padding: 72px 0 77px;
+  line-height: 44px;
+  font-size: 36px;
+  font-style: normal;
+  font-weight: 700;
+}
+
+.section-login .form-login .login-body .login-inner {
+  width: 320px;
+  margin: 0 auto;
+}
+
+.section-login .form-login .login-body .login-inner .btn-login {
+  margin: 50px 0 20px;
+  border: 2px solid #000000;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  border-radius: 5px;
+  width: 100%;
+}
+
+.section-login .form-login .login-body .login-inner .btn-login:hover {
+  background-color: #000000;
+  color: #ffffff;
+}
+
+.section-login .form-login .login-body .login-inner input {
+  background: #f4f4f4;
+}
+
+.section-login .form-login .login-body .login-inner a.sign-up {
+  text-align: center;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 17px;
+  color: #000000;
+}
+
+.section-login .form-login .login-body .login-inner a.sign-up:hover {
+  text-decoration: underline;
+}
+
+.section-login .form-login .login-body .login-inner a.sign-up span {
+  font-weight: 700;
+}
+
+.section-login .form-login .email-login,
+.section-login .form-login .pass-login {
+  outline: none;
+  border: 1px solid #ffffff;
+  background-color: #f4f4f4;
+  padding: 10px 10px 10px 10px;
+  font-size: 14px;
+  color: #000000;
+  display: block;
+  width: 100%;
+}
+
+.section-login .form-login .login-form-grids {
+  width: 45%;
+  padding: 3rem;
+  margin: 3rem auto 0;
+  background-color: #ffffff;
+}
+
+.section-login .form-login .login-form-grids .pass-login {
+  margin: 1rem 0 0;
+}
+
+.section-login .form-login .login-form-grids .testd {
+  outline: none;
+  border: none;
+  padding: 10px 0;
+  font-size: 1rem;
+}
+
+.section-login .form-login .testd {
+  background-color: #f4f4f4;
+  color: #000000;
+}
+
+@media (max-width: 767px) {
+  .section-login {
+    background-image: none;
+    background-color: #ffffff;
+  }
+}
+
+.form-control {
+  background-color: var(--bg-color3);
+  color: #000000;
+}
+
+.input-single {
+  margin: 50px 0 20px;
+  border: 2px solid #000000;
+  padding-top: 00.5rem;
+  padding-bottom: 00.5rem;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  border-radius: 5px;
+  width: 100%;
+}
+
+.input-single:hover {
+  background-color: #000000;
+  color: #ffffff;
 }
 /*# sourceMappingURL=main.css.map */
