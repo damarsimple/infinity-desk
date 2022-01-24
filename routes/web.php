@@ -17,3 +17,7 @@ Route::get('/', function () {
     // return view('welcome');
     return view('home');
 });
+//Route dashboard
+Route::get('/', [FrontendController::class, 'index'])->name('index');
+Route::get('/details/{slug}', [FrontendController::class, 'details'])->name('details');
+Route::get('/product', [FrontendController::class, 'product'])->name('product');
