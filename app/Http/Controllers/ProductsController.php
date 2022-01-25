@@ -6,7 +6,7 @@ use Illuminate\Http\Request;
 
 class ProductsController extends Controller
 {
-    public function products(Request $request)
+    public function product(Request $request)
     {
         return view('pages.frontend.product');
     }

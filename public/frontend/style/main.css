@@ -272,7 +272,7 @@ footer {
 }
 
 .section-login::before {
-  background-image: url("../img/login_background.png");
+  background-image: url("../images/login_background.png");
   background-position: top center;
   background-size: cover;
   background-repeat: no-repeat;

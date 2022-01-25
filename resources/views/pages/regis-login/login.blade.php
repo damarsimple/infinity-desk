@@ -4,7 +4,7 @@
     <div class="form-login">
       <div class="row g-0">
         <div class="col-md-4 d-none d-md-block">
-          <img src="images/img_pendamping_login.png" alt="..." />
+          <img src="{{ url('frontend/images/img_pendamping_login.png') }}" alt="..." />
         </div>
         <div class="col-md-8">
           <div class="login-body bg-white h-100">

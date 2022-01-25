@@ -1,3 +1,4 @@
+@extends('layouts.auth')
 @section('content')
 <div class="container mt-auto">
     <div class="header mt-auto">

@@ -6,8 +6,8 @@ use Illuminate\Http\Request;
 
 class RegisterController extends Controller
 {
-    public function product(Request $request)
+    public function register(Request $request)
     {
-        //return view('pages.frontend.product');
+        return view('pages.regis-login.register');
     }
 }
