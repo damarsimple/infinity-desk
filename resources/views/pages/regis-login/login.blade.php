@@ -1,14 +1,19 @@
 @extends('layouts.app')
 @section('content')
 <section class="section-login">
-    <div class="form-login">
-      <div class="row g-0">
-        <div class="col-md-4 d-none d-md-block">
-          <img src="{{ url('frontend/images/img_pendamping_login.png') }}" alt="..." />
-        </div>
+  <div class="form-login">
+    <div class="row g-0">
+      <div class="col-md-4 d-none d-md-block">
+        <img src="{{ url('frontend/images/img_pendamping_login.png') }}" alt="..." />
+      </div>
+      <form method="POST" action="/login">
+        @csrf
         <div class="col-md-8">
           <div class="login-body bg-white h-100">
             <h5 class="login-title text-center">Login</h5>
+            @if($errors->has('message'))
+            <div class="error">{{ $errors->first('message') }}</div>
+            @endif
             <div class="login-inner">
               <div class="form-group pb-4">
                 <label class="pb-2" for="email">Email Address :</label>
@@ -27,7 +32,8 @@
             </div>
           </div>
         </div>
-      </div>
+      </form>
     </div>
-  </section>
+  </div>
+</section>
 @endsection
