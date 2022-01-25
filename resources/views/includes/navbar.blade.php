@@ -1,8 +1,8 @@
 <nav class="navbar navbar-expand-lg navbar-light">
     <div class="container-fluid">
       <div class="navbar-brand logo">
-        <a href="index.html">
-          <img src="images/Infinity Desk (1).png" alt="Infinity Desk | Fulfill your house with beautiful furniture"
+        <a href="{{ route('index') }}">
+          <img src="{{ url('frontend/images/Infinity Desk (1).png') }}" alt="Infinity Desk | Fulfill your house with beautiful furniture"
             class="logo" />
         </a>
         <a style="font-size: 25px; color: #515151">Infinity Desk
