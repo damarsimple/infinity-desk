@@ -4,9 +4,9 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 
-class ProductController extends Controller
+class ProductsController extends Controller
 {
-    public function product(Request $request)
+    public function products(Request $request)
     {
         return view('pages.frontend.product');
     }
