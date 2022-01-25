@@ -6,7 +6,11 @@
     </div>
     <div class="error"></div>
     <div class="form">
-        <form action="" method="POST">
+        <form action="/register" method="POST">
+            @csrf
+            @if($errors->has('message'))
+            <div class="error">{{ $errors->first('message') }}</div>
+            @endif
             <div class="form-group text-center">
                 <label for="name" style="margin-top: 3rem; margin-bottom: 1rem;">Your Name:</label>
                 <input type="name" class="form-control mb-3" id="name" name="name" value="" required>

@@ -26,8 +26,10 @@ Route::get('/', [LandingController::class, 'index'])->name('index');
 Route::get('/details/{slug}', [DetailController::class, 'details'])->name('details');
 Route::get('/product', [ProductsController::class, 'product'])->name('product');
 
-Route::get('/register', [RegisterController::class, 'register'])->name('register');
 
 // Login
 Route::get('/login', [LoginController::class, 'login']);
 Route::post('/login', [LoginController::class, 'handleLogin']);
+
+Route::get('/register', [RegisterController::class, 'register'])->name('register');
+Route::post('/register', [RegisterController::class, 'handleRegister'])->name('register');
