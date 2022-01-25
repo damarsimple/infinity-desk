@@ -42,7 +42,7 @@ class SeedData extends Command
     {
         $seller = new User();
 
-        $seller->name = 'Seller';
+        $seller->name = 'Slamet Furniture';
         $seller->email = 'seller@gmail.com';
         $seller->bank_detail = '123456';
         $seller->password = Hash::make('password');
@@ -54,7 +54,8 @@ class SeedData extends Command
         $materials = ['karet', 'karet kuning', 'karet merah', 'kayu'];
         $price_type = 'IDR';
         $stock = 10;
-        $description = fn ($product) => $product . " dari Swedia dibuat oleh seniman ternama earthenware dan kaca. $product ini memiliki ukuran yang sangat lumayan dan sangat bagus untuk dibawa ke tempat yang tidak terlalu luas. $product ini memiliki kaca yang sangat bagus untuk menjaga kualitas kaca dan kualitas.";
+
+        $description = fn ($product) => $product . " keren banget ea.";
 
         $declarations = [
             'Kursi' => ['Pendek', 'Panjang', 'Kantor', 'Kayu', 'Plastik', 'Murah'],

@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Product;
 use Illuminate\Http\Request;
 
 class LandingController extends Controller
@@ -13,7 +14,15 @@ class LandingController extends Controller
      */
     public function index()
     {
-        return view('pages.frontend.index');
+        $trendingProducts = Product::inRandomOrder()->take(4)->get();
+        $categoryProducts = Product::inRandomOrder()->take(3)->get();
+        $ourProducts = Product::with('seller')->inRandomOrder()->take(8)->get();
+
+        return view('pages.frontend.index', [
+            'trendings' => $trendingProducts,
+            'categories' => $categoryProducts,
+            'ours' => $ourProducts,
+        ]);
     }
 
 

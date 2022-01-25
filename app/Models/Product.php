@@ -41,4 +41,9 @@ class Product extends Model
     {
         return $this->hasMany(Review::class);
     }
+
+    public function getFormattedPriceAttribute(): string
+    {
+        return $this->price_type . ' ' . $this->price;
+    }
 }
