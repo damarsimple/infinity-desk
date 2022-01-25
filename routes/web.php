@@ -1,6 +1,6 @@
 <?php
 
-use App\Http\Controllers\FrontendController;
+use App\Http\Controllers\LandingController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -19,6 +19,6 @@ use Illuminate\Support\Facades\Route;
 //     return view('home');
 // });
 //Route dashboard
-Route::get('/', [FrontendController::class, 'index'])->name('index');
-Route::get('/details/{slug}', [FrontendController::class, 'details'])->name('details');
-Route::get('/product', [FrontendController::class, 'product'])->name('product');
+Route::get('/', [LandingController::class, 'index'])->name('index');
+Route::get('/details/{slug}', [LandingController::class, 'details'])->name('details');
+Route::get('/product', [LandingController::class, 'product'])->name('product');

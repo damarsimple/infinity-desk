@@ -13,7 +13,7 @@
         </div>
         <div class="card-group mb-3">
             <div class="card me-lg-3">
-                <img src="{{ url('images/img_product_1.png') }}" alt="" class="card__img mb-3">
+                <img src="{{ url('frontend/images/img_product_1.png') }}" alt="" class="card__img mb-3">
                 <div class="card__data">
                   <div class="card__title">Meja</div>
                   <p class="card__description">Meja antik enak banget</p>
@@ -22,7 +22,7 @@
                 </div>
             </div>
             <div class="card me-lg-3">
-                <img src="{{ url('images/img_product_2.png') }}" alt="" class="card__img mb-3">
+                <img src="{{ url('frontend/images/img_product_2.png') }}" alt="" class="card__img mb-3">
                 <div class="card__data">
                   <div class="card__title">Meja</div>
                   <p class="card__description">Meja antik enak banget</p>
@@ -31,7 +31,7 @@
                 </div>
             </div>
             <div class="card me-lg-3">
-                <img src="{{ url('images/img_product_3.png') }}" alt="" class="card__img mb-3">
+                <img src="{{ url('frontend/images/img_product_3.png') }}" alt="" class="card__img mb-3">
                 <div class="card__data">
                   <div class="card__title">Meja</div>
                   <p class="card__description">Meja antik enak banget</p>
@@ -40,7 +40,7 @@
                 </div>
             </div>
             <div class="card me-lg-3">
-                <img src="{{ url('images/img_product_4.png') }}" alt="" class="card__img mb-3">
+                <img src="{{ url('frontend/images/img_product_4.png') }}" alt="" class="card__img mb-3">
                 <div class="card__data">
                   <div class="card__title">Meja</div>
                   <p class="card__description">Meja antik enak banget</p>
@@ -51,7 +51,7 @@
         </div>
         <div class="card-group mb-3">
             <div class="card me-lg-3">
-                <img src="{{ url('images/img_product_5.png') }}" alt="" class="card__img mb-3">
+                <img src="{{ url('frontend/images/img_product_5.png') }}" alt="" class="card__img mb-3">
                 <div class="card__data">
                   <div class="card__title">Meja</div>
                   <p class="card__description">Meja antik enak banget</p>
@@ -60,7 +60,7 @@
                 </div>
             </div>
             <div class="card me-lg-3">
-                <img src="{{ url('images/img_product_6.png') }}" alt="" class="card__img mb-3">
+                <img src="{{ url('frontend/images/img_product_6.png') }}" alt="" class="card__img mb-3">
                 <div class="card__data">
                   <div class="card__title">Meja</div>
                   <p class="card__description">Meja antik enak banget</p>
@@ -69,7 +69,7 @@
                 </div>
             </div>
             <div class="card me-lg-3">
-                <img src="{{ url('images/img_product_7.png') }}" alt="" class="card__img mb-3">
+                <img src="{{ url('frontend/images/img_product_7.png') }}" alt="" class="card__img mb-3">
                 <div class="card__data">
                   <div class="card__title">Meja</div>
                   <p class="card__description">Meja antik enak banget</p>
@@ -78,7 +78,7 @@
                 </div>
             </div>
             <div class="card me-lg-3">
-                <img src="{{ url('images/img_product_8.png') }}" alt="" class="card__img mb-3">
+                <img src="{{ url('frontend/images/img_product_8.png') }}" alt="" class="card__img mb-3">
                 <div class="card__data">
                   <div class="card__title">Meja</div>
                   <p class="card__description">Meja antik enak banget</p>
@@ -89,7 +89,7 @@
         </div>
         <div class="card-group mb-lg-3">
             <div class="card me-lg-5">
-                <img src="{{ url('images/img_product_9.png') }}" alt="" class="card__img mb-3">
+                <img src="{{ url('frontend/images/img_product_9.png') }}" alt="" class="card__img mb-3">
                 <div class="card__data">
                   <div class="card__title">Meja</div>
                   <p class="card__description">Meja antik enak banget</p>
@@ -98,7 +98,7 @@
                 </div>
             </div>
             <div class="card me-lg-5">
-                <img src="{{ url('images/img_product_10.png') }}" alt="" class="card__img mb-3">
+                <img src="{{ url('frontend/images/img_product_10.png') }}" alt="" class="card__img mb-3">
                 <div class="card__data">
                   <div class="card__title">Meja</div>
                   <p class="card__description">Meja antik enak banget</p>
@@ -107,7 +107,7 @@
                 </div>
             </div>
             <div class="card me-lg-5">
-                <img src="{{ url('images/img_product_11.png') }}" alt="" class="card__img mb-3">
+                <img src="{{ url('frontend/images/img_product_11.png') }}" alt="" class="card__img mb-3">
                 <div class="card__data">
                   <div class="card__title">Meja</div>
                   <p class="card__description">Meja antik enak banget</p>
@@ -116,7 +116,7 @@
                 </div>
             </div>
             <div class="card me-lg-3">
-                <img src="{{ url('images/img_product_12.png') }}" alt="" class="card__img mb-3">
+                <img src="{{ url('frontend/images/img_product_12.png') }}" alt="" class="card__img mb-3">
                 <div class="card__data">
                   <div class="card__title">Meja</div>
                   <p class="card__description">Meja antik enak banget</p>
