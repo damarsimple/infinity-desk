@@ -1,7 +1,9 @@
 <?php
 
-use App\Http\Controllers\LandingController;
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\DetailController;
+use App\Http\Controllers\LandingController;
+use App\Http\Controllers\ProductsController;
 
 /*
 |--------------------------------------------------------------------------
@@ -20,5 +22,5 @@ use Illuminate\Support\Facades\Route;
 // });
 //Route dashboard
 Route::get('/', [LandingController::class, 'index'])->name('index');
-Route::get('/details/{slug}', [LandingController::class, 'details'])->name('details');
-Route::get('/product', [LandingController::class, 'product'])->name('product');
+Route::get('/details/{slug}', [DetailController::class, 'details'])->name('details');
+Route::get('/product', [ProductsController::class, 'product'])->name('product');

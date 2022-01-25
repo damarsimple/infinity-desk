@@ -16,14 +16,7 @@ class LandingController extends Controller
         return view('pages.frontend.index');
     }
 
-    public function details(Request $request, $slug)
-    {
-        return view('pages.frontend.details');
-    }
-    public function product(Request $request)
-    {
-        return view('pages.frontend.product');
-    }
+
     /**
      * Show the form for creating a new resource.
      *
