@@ -97,13 +97,13 @@
     <div class="container mx-auto">
       <div class="card-group">
         <div class="card">
-          <img src="images/img_category_1.png" class="card-img-top" alt="...">
+          <img src="{{ url('images/img_category_1.png') }}" class="card-img-top" alt="...">
         </div>
         <div class="card">
-          <img src="images/img_category_2.png" class="card-img-top" alt="...">
+          <img src="{{ url('images/img_category_2.png') }}" class="card-img-top" alt="...">
         </div>
         <div class="card">
-          <img src="images/img_category_3.png" class="card-img-top" alt="...">
+          <img src="{{ url('images/img_category_3.png') }}" class="card-img-top" alt="...">
         </div>
       </div>
     </div>
@@ -118,7 +118,7 @@
     </div>
     <div class="card-product">
       <div class="card me-3">
-        <img src="images/img_product_1.png" alt="" class="card__img mb-3">
+        <img src="{{ url('images/img_product_1.png') }}" alt="" class="card__img mb-3">
         <div class="card__data">
           <h1 class="card__title">Meja</h1>
           <p class="card__description">Meja Antik Enak Banget.</p>
@@ -127,7 +127,7 @@
         </div>
       </div>
       <div class="card me-3">
-        <img src="images/img_product_2.png" alt="" class="card__img mb-3">
+        <img src="{{ url('images/img_product_2.png') }}" alt="" class="card__img mb-3">
         <div class="card__data">
           <h1 class="card__title">Meja</h1>
           <p class="card__description">Meja Antik Enak Banget.</p>
@@ -136,7 +136,7 @@
         </div>
       </div>
       <div class="card me-3">
-        <img src="images/img_product_3.png" alt="" class="card__img mb-3">
+        <img src="{{ url('images/img_product_3.png') }}" alt="" class="card__img mb-3">
         <div class="card__data">
           <h1 class="card__title">Meja</h1>
           <p class="card__description">Meja Antik Enak Banget.</p>
@@ -145,7 +145,7 @@
         </div>
       </div>
       <div class="card me-3">
-        <img src="images/img_product_4.png" alt="" class="card__img mb-3">
+        <img src="{{ url('images/img_product_4.png') }}" alt="" class="card__img mb-3">
         <div class="card__data">
           <h1 class="card__title">Meja</h1>
           <p class="card__description">Meja Antik Enak Banget.</p>
@@ -167,13 +167,13 @@
       </div>
       <div class="card-group">
         <div class="card">
-          <img src="images/img_category_1.png" class="card-img-top" alt="...">
+          <img src="{{ url('images/img_category_1.png') }}" class="card-img-top" alt="...">
         </div>
         <div class="card">
-          <img src="images/img_category_2.png" class="card-img-top" alt="...">
+          <img src="{{ url('images/img_category_2.png') }}" class="card-img-top" alt="...">
         </div>
         <div class="card">
-          <img src="images/img_category_3.png" class="card-img-top" alt="...">
+          <img src="{{ url('images/img_category_3.png') }}" class="card-img-top" alt="...">
         </div>
       </div>
     </div>
@@ -194,7 +194,7 @@
             <div class="card mb-3" style="max-width: 540px;">
               <div class="row g-0">
                 <div class="col-md-4">
-                  <img src="images/img_product_O.png" class="img-fluid rounded-start" alt="...">
+                  <img src="{{ url('images/img_product_O.png') }}" class="img-fluid rounded-start" alt="...">
                 </div>
                 <div class="col-md-8">
                   <div class="card-body">
@@ -213,7 +213,7 @@
             <div class="card mb-3" style="max-width: 540px;">
               <div class="row g-0">
                 <div class="col-md-4">
-                  <img src="images/img_product_O_2.png" class="img-fluid rounded-start" alt="...">
+                  <img src="{{ url('images/img_product_O_2.png') }}" class="img-fluid rounded-start" alt="...">
                 </div>
                 <div class="col-md-8">
                   <div class="card-body">
@@ -232,7 +232,7 @@
             <div class="card mb-3" style="max-width: 540px;">
               <div class="row g-0">
                 <div class="col-md-4">
-                  <img src="images/img_product_O_3.png" class="img-fluid rounded-start" alt="...">
+                  <img src="{{ url('images/img_product_O_3.png') }}" class="img-fluid rounded-start" alt="...">
                 </div>
                 <div class="col-md-8">
                   <div class="card-body">
@@ -251,7 +251,7 @@
             <div class="card mb-3" style="max-width: 540px;">
               <div class="row g-0">
                 <div class="col-md-4">
-                  <img src="images/img_product_O_4.png" class="img-fluid rounded-start" alt="...">
+                  <img src="{{ url('images/img_product_O_4.png') }}" class="img-fluid rounded-start" alt="...">
                 </div>
                 <div class="col-md-8">
                   <div class="card-body">
@@ -272,7 +272,7 @@
             <div class="card mb-3" style="max-width: 540px;">
               <div class="row g-0">
                 <div class="col-md-4">
-                  <img src="images/img_product_O_5.png" class="img-fluid rounded-start" alt="...">
+                  <img src="{{ url('images/img_product_O_5.png') }}" class="img-fluid rounded-start" alt="...">
                 </div>
                 <div class="col-md-8">
                   <div class="card-body">
@@ -291,7 +291,7 @@
             <div class="card mb-3" style="max-width: 540px;">
               <div class="row g-0">
                 <div class="col-md-4">
-                  <img src="images/img_product_O_6.png" class="img-fluid rounded-start" alt="...">
+                  <img src="{{ url('images/img_product_O_6.png') }}" class="img-fluid rounded-start" alt="...">
                 </div>
                 <div class="col-md-8">
                   <div class="card-body">
@@ -310,7 +310,7 @@
             <div class="card mb-3" style="max-width: 540px;">
               <div class="row g-0">
                 <div class="col-md-4">
-                  <img src="images/img_product_O_7.png" class="img-fluid rounded-start" alt="...">
+                  <img src="{{ url('images/img_product_O_7.png') }}" class="img-fluid rounded-start" alt="...">
                 </div>
                 <div class="col-md-8">
                   <div class="card-body">
@@ -329,7 +329,7 @@
             <div class="card mb-3" style="max-width: 540px;">
               <div class="row g-0">
                 <div class="col-md-4">
-                  <img src="images/img_product_O_8.png" class="img-fluid rounded-start" alt="...">
+                  <img src="{{ url('images/img_product_O_8.png') }}" class="img-fluid rounded-start" alt="...">
                 </div>
                 <div class="col-md-8">
                   <div class="card-body">
