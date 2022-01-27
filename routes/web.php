@@ -2,8 +2,8 @@
 
 use Illuminate\Support\Facades\Route;
 
-use App\Http\Controllers\Autorization\LoginController;
-use App\Http\Controllers\Autorization\RegisterController;
+use App\Http\Controllers\Authorization\LoginController;
+use App\Http\Controllers\Authorization\RegisterController;
 
 use App\Http\Controllers\Frontend\LandingController;
 use App\Http\Controllers\Frontend\ProductsController;
