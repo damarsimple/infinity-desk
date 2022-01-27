@@ -1,7 +1,8 @@
 <?php
 
-namespace App\Http\Controllers;
+namespace App\Http\Controllers\UserDashboard;
 
+use App\Http\Controllers\Controller;
 use App\Models\Change;
 use Illuminate\Http\Request;
 

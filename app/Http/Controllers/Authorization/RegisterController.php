@@ -1,7 +1,8 @@
 <?php
 
-namespace App\Http\Controllers;
+namespace App\Http\Controllers\Authorization;
 
+use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use App\Models\User;
@@ -26,7 +27,8 @@ class RegisterController extends Controller
             $user = User::create($data);
 
             Auth::login($user);
-
+            // redirect if redirectTo specified
+            // how you didnt know this?
             return redirect(
                 $req->has('redirectTo') ? $req->get('redirectTo') : '/dashboard'
             );

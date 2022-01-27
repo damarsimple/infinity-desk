@@ -1,11 +1,12 @@
 <?php
 
-namespace App\Http\Controllers;
+namespace App\Http\Controllers\UserDashboard;
 
+use App\Http\Controllers\Controller;
 use App\Models\Product;
 use Illuminate\Http\Request;
 
-class LandingController extends Controller
+class ProductController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -14,17 +15,8 @@ class LandingController extends Controller
      */
     public function index()
     {
-        $trendingProducts = Product::inRandomOrder()->take(4)->get();
-        $categoryProducts = Product::inRandomOrder()->take(3)->get();
-        $ourProducts = Product::with('seller')->inRandomOrder()->take(8)->get();
-
-        return view('pages.frontend.index', [
-            'trendings' => $trendingProducts,
-            'categories' => $categoryProducts,
-            'ours' => $ourProducts,
-        ]);
+        $products = Product::with('seller')->paginate(12);
     }
-
 
     /**
      * Show the form for creating a new resource.
@@ -50,10 +42,10 @@ class LandingController extends Controller
     /**
      * Display the specified resource.
      *
-     * @param  int  $id
+     * @param  \App\Models\Product  $product
      * @return \Illuminate\Http\Response
      */
-    public function show($id)
+    public function show(Product $product)
     {
         //
     }
@@ -61,10 +53,10 @@ class LandingController extends Controller
     /**
      * Show the form for editing the specified resource.
      *
-     * @param  int  $id
+     * @param  \App\Models\Product  $product
      * @return \Illuminate\Http\Response
      */
-    public function edit($id)
+    public function edit(Product $product)
     {
         //
     }
@@ -73,10 +65,10 @@ class LandingController extends Controller
      * Update the specified resource in storage.
      *
      * @param  \Illuminate\Http\Request  $request
-     * @param  int  $id
+     * @param  \App\Models\Product  $product
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, $id)
+    public function update(Request $request, Product $product)
     {
         //
     }
@@ -84,10 +76,10 @@ class LandingController extends Controller
     /**
      * Remove the specified resource from storage.
      *
-     * @param  int  $id
+     * @param  \App\Models\Product  $product
      * @return \Illuminate\Http\Response
      */
-    public function destroy($id)
+    public function destroy(Product $product)
     {
         //
     }
