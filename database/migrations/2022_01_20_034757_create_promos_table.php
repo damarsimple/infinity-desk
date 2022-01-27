@@ -23,8 +23,8 @@ class CreatePromosTable extends Migration
             $table->float('value');
             $table->string('type'); // percent or fixed
 
-            $table->timestamp('start_at');
-            $table->timestamp('finish_at');
+            $table->timestamp('start_at')->useCurrent();
+            $table->timestamp('finish_at')->useCurrent();;
 
             $table->timestamps();
         });
