@@ -1,11 +1,12 @@
 <?php
 
-namespace App\Http\Controllers;
+namespace App\Http\Controllers\UserDashboard;
 
-use App\Models\Procurement;
+use App\Http\Controllers\Controller;
+use App\Models\Review;
 use Illuminate\Http\Request;
 
-class ProcurementController extends Controller
+class ReviewController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -41,10 +42,10 @@ class ProcurementController extends Controller
     /**
      * Display the specified resource.
      *
-     * @param  \App\Models\Procurement  $procurement
+     * @param  \App\Models\Review  $review
      * @return \Illuminate\Http\Response
      */
-    public function show(Procurement $procurement)
+    public function show(Review $review)
     {
         //
     }
@@ -52,10 +53,10 @@ class ProcurementController extends Controller
     /**
      * Show the form for editing the specified resource.
      *
-     * @param  \App\Models\Procurement  $procurement
+     * @param  \App\Models\Review  $review
      * @return \Illuminate\Http\Response
      */
-    public function edit(Procurement $procurement)
+    public function edit(Review $review)
     {
         //
     }
@@ -64,10 +65,10 @@ class ProcurementController extends Controller
      * Update the specified resource in storage.
      *
      * @param  \Illuminate\Http\Request  $request
-     * @param  \App\Models\Procurement  $procurement
+     * @param  \App\Models\Review  $review
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, Procurement $procurement)
+    public function update(Request $request, Review $review)
     {
         //
     }
@@ -75,10 +76,10 @@ class ProcurementController extends Controller
     /**
      * Remove the specified resource from storage.
      *
-     * @param  \App\Models\Procurement  $procurement
+     * @param  \App\Models\Review  $review
      * @return \Illuminate\Http\Response
      */
-    public function destroy(Procurement $procurement)
+    public function destroy(Review $review)
     {
         //
     }

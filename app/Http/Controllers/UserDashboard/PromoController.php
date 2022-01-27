@@ -1,11 +1,12 @@
 <?php
 
-namespace App\Http\Controllers;
+namespace App\Http\Controllers\UserDashboard;
 
-use App\Models\Cart;
+use App\Http\Controllers\Controller;
+use App\Models\Promo;
 use Illuminate\Http\Request;
 
-class CartController extends Controller
+class PromoController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -41,10 +42,10 @@ class CartController extends Controller
     /**
      * Display the specified resource.
      *
-     * @param  \App\Models\Cart  $cart
+     * @param  \App\Models\Promo  $promo
      * @return \Illuminate\Http\Response
      */
-    public function show(Cart $cart)
+    public function show(Promo $promo)
     {
         //
     }
@@ -52,10 +53,10 @@ class CartController extends Controller
     /**
      * Show the form for editing the specified resource.
      *
-     * @param  \App\Models\Cart  $cart
+     * @param  \App\Models\Promo  $promo
      * @return \Illuminate\Http\Response
      */
-    public function edit(Cart $cart)
+    public function edit(Promo $promo)
     {
         //
     }
@@ -64,10 +65,10 @@ class CartController extends Controller
      * Update the specified resource in storage.
      *
      * @param  \Illuminate\Http\Request  $request
-     * @param  \App\Models\Cart  $cart
+     * @param  \App\Models\Promo  $promo
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, Cart $cart)
+    public function update(Request $request, Promo $promo)
     {
         //
     }
@@ -75,10 +76,10 @@ class CartController extends Controller
     /**
      * Remove the specified resource from storage.
      *
-     * @param  \App\Models\Cart  $cart
+     * @param  \App\Models\Promo  $promo
      * @return \Illuminate\Http\Response
      */
-    public function destroy(Cart $cart)
+    public function destroy(Promo $promo)
     {
         //
     }

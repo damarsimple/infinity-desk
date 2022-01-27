@@ -1,11 +1,21 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-use App\Http\Controllers\LoginController;
-use App\Http\Controllers\DetailController;
-use App\Http\Controllers\LandingController;
-use App\Http\Controllers\ProductsController;
-use App\Http\Controllers\RegisterController;
+
+use App\Http\Controllers\Autorization\LoginController;
+use App\Http\Controllers\Autorization\RegisterController;
+
+use App\Http\Controllers\Frontend\LandingController;
+use App\Http\Controllers\Frontend\ProductsController;
+use App\Http\Controllers\Frontend\DetailController;
+
+use App\Http\Controllers\UserDashboard\CartController;
+use App\Http\Controllers\UserDashboard\ChangeController;
+use App\Http\Controllers\UserDashboard\ProcurementController;
+use App\Http\Controllers\UserDashboard\ProductController;
+use App\Http\Controllers\UserDashboard\PromoController;
+use App\Http\Controllers\UserDashboard\ReviewController;
+
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -17,10 +27,7 @@ use App\Http\Controllers\RegisterController;
 |
 */
 
-// Route::get('/', function () {
-//     // return view('welcome');
-//     return view('home');
-// });
+
 //Route dashboard
 Route::get('/', [LandingController::class, 'index'])->name('index');
 Route::get('/details/{slug}', [DetailController::class, 'details'])->name('details');
@@ -33,3 +40,15 @@ Route::post('/login', [LoginController::class, 'handleLogin']);
 
 Route::get('/register', [RegisterController::class, 'register'])->name('register');
 Route::post('/register', [RegisterController::class, 'handleRegister'])->name('register');
+
+
+// User Dashboard
+
+Route::prefix('/dashboard')->group(function () {
+    Route::resource('products', ProductController::class);
+    Route::resource('reviews', ReviewController::class);
+    Route::resource('procurements', ProcurementController::class);
+    Route::resource('carts', CartController::class);
+    Route::resource('promos', PromoController::class);
+    Route::resource('changes', ChangeController::class);
+});
