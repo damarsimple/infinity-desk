@@ -4,7 +4,6 @@ namespace App\Models;
 
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
-use Trackable;
 
 class Procurement extends Model
 {
@@ -18,5 +17,10 @@ class Procurement extends Model
     public function seller()
     {
         return $this->belongsTo(User::class);
+    }
+
+    public function carts()
+    {
+        return $this->hasMany(Cart::class);
     }
 }

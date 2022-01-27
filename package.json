@@ -14,5 +14,9 @@
         "laravel-mix": "^6.0.6",
         "lodash": "^4.17.19",
         "postcss": "^8.1.14"
+    },
+    "dependencies": {
+        "@types/swiper": "^6.0.0",
+        "swiper": "^7.4.1"
     }
 }
