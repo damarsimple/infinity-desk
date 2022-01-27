@@ -9,6 +9,12 @@ use App\Http\Controllers\Frontend\LandingController;
 use App\Http\Controllers\Frontend\ProductsController;
 use App\Http\Controllers\Frontend\DetailController;
 
+use App\Http\Controllers\UserDashboard\CartController;
+use App\Http\Controllers\UserDashboard\ChangeController;
+use App\Http\Controllers\UserDashboard\ProcurementController;
+use App\Http\Controllers\UserDashboard\ProductController;
+use App\Http\Controllers\UserDashboard\PromoController;
+use App\Http\Controllers\UserDashboard\ReviewController;
 
 /*
 |--------------------------------------------------------------------------
@@ -36,7 +42,13 @@ Route::get('/register', [RegisterController::class, 'register'])->name('register
 Route::post('/register', [RegisterController::class, 'handleRegister'])->name('register');
 
 
+// User Dashboard
 
 Route::prefix('/dashboard')->group(function () {
-    Route::resource('product', ProductsController::class);
+    Route::resource('products', ProductController::class);
+    Route::resource('reviews', ReviewController::class);
+    Route::resource('procurements', ProcurementController::class);
+    Route::resource('carts', CartController::class);
+    Route::resource('promos', PromoController::class);
+    Route::resource('changes', ChangeController::class);
 });
