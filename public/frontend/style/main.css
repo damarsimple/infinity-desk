@@ -156,7 +156,7 @@ img {
 
 .card {
   width: 320px;
-  height: 400px;
+  height: 350px;
   background-color: var(--bg-color1);
   border-radius: 1rem;
   padding: 2rem 1rem 0;
@@ -234,8 +234,8 @@ img {
 
 .card:hover .card__data {
   text-align: center;
-  -webkit-transform: translateY(-100px);
-          transform: translateY(-100px);
+  -webkit-transform: translateY(-135px);
+          transform: translateY(-135px);
   -webkit-transition: 0.5s;
   transition: 0.5s;
 }

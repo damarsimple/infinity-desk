@@ -93,8 +93,8 @@
   <span class="vc_empty_space_inner"></span>
 </div>
 <section class="flex bg-gray-100 py-16 px-4" id="product-category">
-  <div class="container mx-auto">
-    <div class="card-group">
+  <div class="container mx-auto" style="padding-top: 70px;">
+    <div class="card-group" >
       <div class="card">
         <img src="{{ url('frontend/images/img_category_1.png') }}" class="card-img-top" alt="...">
       </div>
