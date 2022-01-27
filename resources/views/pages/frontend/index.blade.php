@@ -111,7 +111,8 @@
   <div class="container mx-auto">
     <div class="flex flex-start mb-4">
       <h3 class="text-2xl capitalize font-semibold text-lg-center">
-        Trending <br class="" /> Product
+        Trending <br class="" /> 
+        <span class="product-text">Product</span>
       </h3>
     </div>
   </div>
@@ -136,7 +137,8 @@
   <div class="container mx-auto">
     <div class="flex flex-start mb-4">
       <h3 class="text-2xl capitalize font-semibold text-lg-center">
-        Category <br class="" /> Product
+        Category <br class="" /> 
+        <span class="product-text">Product </span>
       </h3>
     </div>
     <div class="card-group">
@@ -159,7 +161,8 @@
   <div class="container mx-auto">
     <div class="flex flex-start mb-4">
       <h3 class="text-2xl capitalize font-semibold text-lg-center">
-        Our <br class="" /> Product
+        Our <br class="" /> 
+        <span class="product-text">Product</span>
       </h3>
     </div>
     <div class="row row-cols-1 row-cols-md-1 g-2 ms-lg-5 me-lg-5">
