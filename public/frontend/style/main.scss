@@ -1,134 +1,16 @@
-// /===== VARIABLES CSS =====/
-:root {
-    // /===== Colores =====/
-    --bg-color1: #f2f2f2;
-    --bg-color2: #b3b3b5;
-    --bg-color3: #dadada;
-    --primary-color: #aa9359;
-    --primary-text: #aa9359;
-    --secondary-color: #c4c4c4;
-    --secondary-text: #c4c4c4;
-    --tried-text: #464646;
-    --alert: #ff8181;
-    // /===== Fuente y tipografia =====/
-    --body-font: "Montserrat", sans-serif;
-    --h1-font-size: 1.5rem;
-    --h2-font-size: 1.25rem;
-    --normal-font-size: 1rem;
-    --small-font-size: 0.875rem;
-}
+@import "components/navbar";
+@import "components/carousel";
+@import "components/product";
+@import "components/product";
+@import "components/footer";
 
-// /===== BASE =====/
-*,
-::before,
-::after {
-    box-sizing: border-box;
-}
+@import "pages/details";
+@import "pages/login";
+@import "pages/register";
+@import "pages/user.scss";
 
-body {
-    margin: 0;
-    padding: 0;
-    background-color: var(--bg-color1);
-    font-family: var(--body-font);
-    font-size: var(--normal-font-size);
-}
+@import "global";
 
-//navabr
-.navbar {
-    background-color: #dadada;
-
-    .navbar-brand {
-        width: 50px;
-    }
-
-    .nav-item {
-        padding-right: 50px;
-
-        .nav-link {
-            font-size: 18px;
-            font-style: normal;
-            font-weight: 400;
-            line-height: 22px;
-
-            &.active {
-                color: #aa9359;
-                font-size: 18px;
-                font-style: normal;
-                font-weight: 600;
-                line-height: 22px;
-            }
-
-            &:hover {
-                color: #aa9359;
-                font-size: 18px;
-                font-style: normal;
-                line-height: 22px;
-            }
-        }
-    }
-
-    .btn-login {
-        border: 2px solid #0b0b0b;
-        box-sizing: border-box;
-        border-radius: 5px;
-    }
-}
-
-//carousel
-.carousel {
-    height: 700px;
-
-    .carousel-main-inner {
-        padding: 200px 0 0 147px;
-
-        .carousel-text {
-            .text-new-arrival {
-                font-size: 24px;
-                font-style: normal;
-                font-weight: 400;
-                line-height: 29px;
-                color: #515151;
-            }
-
-            .text-comfort-chair {
-                padding-top: 17px;
-                font-size: 36px;
-                font-style: normal;
-                font-weight: 700;
-                line-height: 44px;
-                color: #464646;
-            }
-
-            p {
-                font-size: 18px;
-                font-style: normal;
-                font-weight: 400;
-                line-height: 22px;
-                color: #515151;
-                padding-top: 10px;
-            }
-
-            button {
-                &.btn-buy-now {
-                    margin-top: 35px;
-                    padding: 15px 70px;
-                    border: 2px solid #0b0b0b;
-                    box-sizing: border-box;
-                    font-size: 18px;
-                    font-style: normal;
-                    font-weight: 600;
-                    line-height: 22px;
-                    color: #515151;
-                }
-            }
-        }
-    }
-}
-.product-text {
-    color: var(--primary-text);
-    font-weight: 700;
-    size: 36px;
-}
 //product category
 #product-category {
     .card-group {
@@ -145,81 +27,16 @@ body {
     }
 }
 
-h1,
-p {
-    margin: 0;
-}
+// h1,
+// p {
+//     margin: 0;
+// }
 
-a {
-    text-decoration: none;
-}
-
-img {
-    max-width: 100%;
-    height: auto;
-}
+// a {
+//     text-decoration: none;
+// }
 
 // /===== CARD =====/
-.card-product {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-color: var(--bg-color1);
-}
-
-.card {
-    width: 320px;
-    height: 350px;
-    background-color: var(--bg-color1);
-    border-radius: 1rem;
-    padding: 2rem 1rem 0;
-    color: var(--primary-text);
-    overflow-y: hidden;
-}
-
-.card__img {
-    position: inherit;
-    padding-left: inherit;
-    width: 260px;
-    filter: drop-shadow(5px 10px 15px rgba(8, 9, 13, 0.4));
-}
-
-.card__data {
-    transform: translateY(13.2rem);
-    text-align: center;
-}
-
-.card-title {
-    color: var(--tried-text);
-    margin-bottom: 0.5rem;
-    size: 18px;
-    font-weight: 500;
-    line-height: 22px;
-}
-
-.card__preci {
-    display: inline-block;
-    font-weight: 700;
-    margin-bottom: 1.25rem;
-    size: 24px;
-    line-height: 30px;
-}
-
-.card__description {
-    size: 18px;
-    font-weight: 300;
-    text-align: initial;
-    margin-bottom: 1.25rem;
-    opacity: 0;
-    line-height: 22px;
-}
-
-.card__place {
-    color: #000000;
-    size: 14px;
-    font-weight: 600;
-    line-height: 22px;
-}
 .card__button {
     display: block;
     width: max-content;
@@ -274,154 +91,7 @@ img {
     }
 }
 
-footer {
-    background: var(--bg-color3);
-    padding: 32px 0;
-    text-align: center;
-    color: var(--secondary-text);
-    font-size: 12px;
-}
-
-// Login
-.section-login {
-    background: rgba(150, 150, 150, 0.72);
-    position: relative;
-    height: 100vh;
-
-    &::before {
-        background-image: url("../images/login_background.png");
-        background-position: top center;
-        background-size: cover;
-        background-repeat: no-repeat;
-        width: 100%;
-        height: 100%;
-        content: "";
-        opacity: 1;
-        position: absolute;
-        z-index: -1;
-    }
-
-    .form-login {
-        max-width: 1028px;
-        margin: 0 auto;
-        padding-top: 50px;
-
-        img {
-            height: 100%;
-        }
-
-        .login-body {
-            .login-title {
-                padding: 72px 0 77px;
-                line-height: 44px;
-                font-size: 36px;
-                font-style: normal;
-                font-weight: 700;
-            }
-
-            .login-inner {
-                width: 320px;
-                margin: 0 auto;
-
-                .btn-login {
-                    margin: 50px 0 20px;
-                    border: 2px solid #000000;
-                    box-sizing: border-box;
-                    border-radius: 5px;
-                    width: 100%;
-
-                    &:hover {
-                        background-color: #000000;
-                        color: #ffffff;
-                    }
-                }
-
-                input {
-                    background: #f4f4f4;
-                }
-
-                a {
-                    &.sign-up {
-                        text-align: center;
-                        font-size: 14px;
-                        font-style: normal;
-                        font-weight: 500;
-                        line-height: 17px;
-                        color: #000000;
-
-                        &:hover {
-                            text-decoration: underline;
-                        }
-
-                        span {
-                            font-weight: 700;
-                        }
-                    }
-                }
-            }
-        }
-
-        .email-login,
-        .pass-login {
-            outline: none;
-            border: 1px solid #ffffff;
-            background-color: #f4f4f4;
-            padding: 10px 10px 10px 10px;
-            font-size: 14px;
-            color: #000000;
-            display: block;
-            width: 100%;
-        }
-
-        .login-form-grids {
-            width: 45%;
-            padding: 3rem;
-            margin: 3rem auto 0;
-            background-color: #ffffff;
-
-            .pass-login {
-                margin: 1rem 0 0;
-            }
-
-            .testd {
-                outline: none;
-                border: none;
-                padding: 10px 0;
-                font-size: 1rem;
-            }
-        }
-
-        .testd {
-            background-color: #f4f4f4;
-            color: #000000;
-        }
-    }
-}
-
-@media (max-width: 767px) {
-    .section-login {
-        background-image: none;
-        background-color: #ffffff;
-    }
-}
-// --end Login--
 .form-control {
     background-color: var(--bg-color3);
     color: #000000;
-}
-
-// --Register--
-.input-single {
-    margin: 50px 0 20px;
-    border: 2px solid #000000;
-    padding-top: 00.5rem;
-    padding-bottom: 00.5rem;
-    box-sizing: border-box;
-    border-radius: 5px;
-    width: 100%;
-
-    &:hover {
-        background-color: #000000;
-        color: #ffffff;
-    }
 }

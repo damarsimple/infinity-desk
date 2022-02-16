@@ -1,0 +1,214 @@
+*,
+::before,
+::after {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-size: 1rem;
+  font-weight: 600;
+  line-height: 1.5;
+  -webkit-text-size-adjust: 100%;
+  -webkit-tap-highlight-color: transparent;
+}
+
+//navbar
+.navbar {
+  background-color: #dadada;
+  align-items: center;
+  display: flex;
+  justify-content: space-between;
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+
+  .navbar-nav {
+    display: flex;
+    flex-direction: column;
+    padding-left: 0;
+    margin-bottom: 0;
+    // list-style: none;
+  }
+  .navbar-brand {
+    padding-top: 0.75rem;
+    padding-bottom: 00.75rem;
+    font-size: 1rem;
+    background-color: rgba(0, 0, 0, 0.25);
+    box-shadow: inset -1px 0 0 rgb(0 0 0 / 25%);
+    width: 50px;
+  }
+  a:-webkit-any-link {
+    cursor: pointer;
+  }
+  .navbar-toggler {
+    top: 0.25rem;
+    right: 1rem;
+    padding: 0.25rem 0.75rem;
+    font-size: 1.25rem;
+    line-height: 1;
+    background-color: transparent;
+    // border: 1px solid transparent;
+    border-radius: 0.25rem;
+    // transition: box-shadow .15s ease-in-out;
+  }
+  .form-control {
+    padding: 0.75rem 1rem;
+    // border-width: 0;
+    // border-radius: 0;
+  }
+  .form-control-dark {
+    color: #fff;
+    background-color: rgba(255, 255, 255, 0.1);
+    // border-color: rgba(255, 255, 255, .1);
+  }
+}
+.navbar-dark {
+  .navbar-toggler {
+    color: rgba(255, 255, 255, 0.55);
+    border-color: rgba(255, 255, 255, 0.1);
+  }
+  .navbar-toggler-icon {
+    display: inline-block;
+    width: 1.5em;
+    height: 1.5em;
+    vertical-align: middle;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 100%;
+  }
+  .navbar-nav {
+    .nav-link {
+      color: rgba(255, 255, 255, 0.55);
+    }
+  }
+}
+.navbar-brand {
+  text-decoration: none;
+  white-space: nowrap;
+}
+button,
+select {
+  text-transform: none;
+}
+button,
+input,
+optgroup,
+select,
+textarea {
+  // margin: 0;
+  font-family: inherit;
+}
+button {
+  letter-spacing: normal;
+  word-spacing: normal;
+  text-indent: 0px;
+  text-shadow: none;
+  text-align: center;
+  align-items: flex-start;
+}
+.container,
+.container-fluid,
+.container-lg,
+.container-md,
+.container-sm,
+.container-xl,
+.container-xxl {
+  width: 100%;
+  // padding-right: ;
+  // padding-left: ;
+  margin-right: auto;
+  margin-left: auto;
+}
+.nav {
+  display: flex;
+  flex-wrap: wrap;
+  padding-left: 0;
+  margin-bottom: 0;
+  list-style: none;
+}
+li {
+  display: list-item;
+  text-align: -webkit-match-parent;
+}
+.row {
+  --bs-gutter-x: 1.5rem;
+  --bs-gutter-y: 0;
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: calc(var(--bs-gutter-y) * -1);
+  margin-right: calc(var(--bs-gutter-x) * -0.5);
+  margin-left: calc(var(--bs-gutter-x) * -0.5);
+}
+.sidebar {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 100;
+  padding: 48px 0 0;
+  box-shadow: inset -1px 0 0 rgb(0 0 0 / 10%);
+  .nav-link {
+    font-weight: 500;
+    .active {
+      color: #2470dc;
+      .feather {
+        color: inherit;
+      }
+    }
+    &:hover {
+      .feather {
+        color: inherit;
+      }
+    }
+    .feather {
+      margin-right: 4px;
+    }
+  }
+}
+.feather {
+  width: 16px;
+  height: 16px;
+  vertical-align: text-bottom;
+}
+
+.nav-link {
+  display: block;
+  padding: 0.5rem 1rem;
+  text-decoration: none;
+  transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out,
+    border-color 0.15s ease-in-out;
+}
+.form-control {
+  display: block;
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 1;
+  background-clip: padding-box;
+  border: 1px solid #ced4da;
+  appearance: none;
+  // transition: border-color .15s
+  // ease-in-out, box-shadow .15s
+  // ease-in-out;
+}
+@media (min-width: 768px) {
+  .flex-md-nowrap {
+    flex-wrap: nowrap;
+  }
+}
+@media (min-width: 768px) {
+  .col-md-3 {
+    flex: 0 0 auto;
+    width: 25%;
+  }
+}
+@media (min-width: 768px) {
+  .d-md-none {
+    display: none;
+  }
+}
+@media (min-width: 768px) {
+  .d-md-block {
+    display: block;
+  }
+}

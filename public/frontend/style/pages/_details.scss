@@ -1,0 +1,72 @@
+//details
+
+.section-details-header {
+  padding-top: 76px;
+}
+
+.section-details-content {
+  min-height: 100vh;
+
+  .card-details {
+    padding: 30px;
+    border-radius: 11px;
+
+    .join-container {
+      margin-top: -16px;
+
+      .btn-join-now {
+        background-color: #ff9e53;
+        color: #fff;
+        border-radius: 0;
+
+        &:hover {
+          background-color: #ffb57c;
+          color: #fff;
+        }
+      }
+    }
+  }
+
+  .features {
+    margin-top: 20px;
+
+    h3 {
+      font-size: 18px;
+      color: #071c4d;
+      margin-bottom: 0;
+    }
+
+    p {
+      margin-bottom: 0;
+    }
+
+    .description {
+      margin-left: 10px;
+      overflow: hidden;
+      float: left;
+    }
+
+    .features-image {
+      width: 45px;
+      height: 45px;
+      float: left;
+    }
+  }
+
+  .gallery {
+    .xzoom-container {
+      display: block;
+    }
+
+    .xzoom {
+      width: 100%;
+      box-shadow: none;
+      margin-bottom: 10px;
+    }
+
+    .xactive {
+      border: 4px solid #1abc9c;
+      box-shadow: none;
+    }
+  }
+}

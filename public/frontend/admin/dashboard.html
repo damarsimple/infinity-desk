@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Infinity Desk | Admin Dashboard</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="shortcut icon" href="favicon.ico">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="styles/main.css">
+</head>
+<body>
+    <header class="navbar navbar-dark sticky-top bg-dark flex-md-nowrap p-0 shadow">
+        <a class="navbar-brand col-md-3 col-lg-2 me-0 px-3" href="dashboard.html">
+            <div class="d-flex">
+                <img src="../img/Infinity Desk (1).png" alt="Infinity Desk | Fulfill your house with beautifull furniture" width="50" height="34" class="d-inline-block align-text-top">
+                <div class="">
+                    Infinity Desk <br/>
+                <span>Fulfill You House With Beautifull Furniture</span>
+                </div>
+            </div>
+        </a>
+        <button class="navbar-toggler position-absolute d-md-none collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#sidebarMenu" aria-controls="sidebarMenu" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="navbar-nav">
+          <div class="nav-item text-nowrap">
+            <a class="nav-link px-3" href="#">
+                <img src="../img/figma-icon/icon_14.svg" alt="..." width="24" height="24" 
+                viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                stroke-linecap="round" stroke-linejoin="round" class="feather feather-home"
+                aria-hidden="true">
+                Logout
+            </a>
+          </div>
+        </div>
+      </header>
+      <section class="section">
+        <div class="container-fluid">
+            <div class="row">
+                <nav class="col-md-3 col-lg-2 d-md-block bg-light sidebar collapse">
+                    <div class="position-sticky pt-3">
+                        <ul class="nav flex-column">
+                            <li class="nav-item">
+                              <a href="dashboard.html" class="nav-link active" aria-current="page">
+                                  <img src="../img/figma-icon/icon.svg" alt="..." width="40" height="40" 
+                                  viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                                  stroke-linecap="round" stroke-linejoin="round" class="feather feather-home"
+                                  aria-hidden="true">
+                                  " Dashboard "
+                              </a>
+                            </li>
+                            <li class="nav-item">
+                              <a href="#" class="nav-link active" aria-current="page">
+                                  <img src="../img/figma-icon/icon_2.svg" alt="..." width="40" height="40"
+                                  viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"stroke-linecap="round" 
+                                  stroke-linejoin="round" class="feather feather-home"
+                                  aria-hidden="true">
+                                  " Customers "
+                              </a>
+                            </li>
+                            <li class="nav-item">
+                              <a href="#" class="nav-link active" aria-current="page">
+                                  <img src="../img/figma-icon/icon_3.svg" alt="..." width="30" height="30"
+                                  viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"stroke-linecap="round" 
+                                  stroke-linejoin="round" class="feather feather-home"
+                                  aria-hidden="true">
+                                  " Partners "
+                              </a>
+                            </li>
+                            <li class="nav-item">
+                              <a href="#" class="nav-link active" aria-current="page">
+                                  <img src="../img/figma-icon/icon_4.svg" alt="..." width="30" height="30"
+                                  viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"stroke-linecap="round" 
+                                  stroke-linejoin="round" class="feather feather-home"
+                                  aria-hidden="true">
+                                  " Orders "
+                              </a>
+                            </li>
+                            <li class="nav-item">
+                              <a href="#" class="nav-link active" aria-current="page">
+                                  <img src="../img/figma-icon/icon_5.svg" alt="..." width="40" height="40"
+                                  viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"stroke-linecap="round" 
+                                  stroke-linejoin="round" class="feather feather-home"
+                                  aria-hidden="true">
+                                  " Billing "
+                              </a>
+                            </li>
+                            <li class="nav-item">
+                              <a href="#" class="nav-link active" aria-current="page">
+                                  <img src="../img/figma-icon/icon_6.svg" alt="..." width="40" height="40"
+                                  viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"stroke-linecap="round" 
+                                  stroke-linejoin="round" class="feather feather-home"
+                                  aria-hidden="true">
+                                  " Reviews "
+                              </a>
+                            </li>
+                            <!-- <li class="nav-item">
+                              <a href="#" class="nav-link active" aria-current="page">
+                                  <img src="../img/figma-icon/icon_8.svg" alt="..." width="30" height="30"
+                                  viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"stroke-linecap="round" 
+                                  stroke-linejoin="round" class="feather feather-home"
+                                  aria-hidden="true">
+                                  " Supports "
+                              </a>
+                            </li> -->
+                            <li class="nav-item">
+                              <a href="#" class="nav-link active" aria-current="page">
+                                  <img src="../img/figma-icon/icon_9.svg" alt="..." width="30" height="30"
+                                  viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"stroke-linecap="round" 
+                                  stroke-linejoin="round" class="feather feather-home"
+                                  aria-hidden="true">
+                                  " Coupuns "
+                              </a>
+                            </li>
+                            <li class="nav-item">
+                              <a href="#" class="nav-link active" aria-current="page">
+                                  <img src="../img/figma-icon/icon_10.svg" alt="..." width="30" height="30" 
+                                  viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"stroke-linecap="round" 
+                                  stroke-linejoin="round" class="feather feather-home"
+                                  aria-hidden="true">
+                                  " Auctions "
+                              </a>
+                            </li>
+                            <li class="nav-item">
+                              <a href="#" class="nav-link active" aria-current="page">
+                                  <img src="../img/figma-icon/icon_11.svg" alt="..." width="30" height="30"
+                                  viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"stroke-linecap="round" 
+                                  stroke-linejoin="round" class="feather feather-home"
+                                  aria-hidden="true">
+                                  " Categories/Tags "
+                              </a>
+                            </li>
+                            <li class="nav-item">
+                              <a href="#" class="nav-link active" aria-current="page">
+                                  <img src="../img/figma-icon/icon_12.svg" alt="..." width="30" height="30"
+                                  viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"stroke-linecap="round" 
+                                  stroke-linejoin="round" class="feather feather-home"
+                                  aria-hidden="true">
+                                  " Reports "
+                              </a>
+                            </li>
+                            <li class="nav-item">
+                              <a href="#" class="nav-link active" aria-current="page">
+                                  <img src="../img/figma-icon/icon_13.svg" alt="..." width="40" height="40"
+                                  viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"stroke-linecap="round" 
+                                  stroke-linejoin="round" class="feather feather-home"
+                                  aria-hidden="true">
+                                  " Setting "
+                              </a>
+                            </li>                          
+                        </ul>
+                    </div>
+                </nav>
+            </div>
+            <div class="row">
+                <div class="col-lg-4 col-md col-sm-12">
+                    <div class="card card-statistic-2">
+                        <div class="card-stats">
+                            <div class="card-stats-title">
+                                "Order Statistics - "
+                                <div class="dropdown d-inline">
+                                    <a href="#" class="font-weight-600 dropdown-toggle" data-toggle="dropdown" id="orders-month">
+                                        "August"
+                                    </a>
+                                    <ul class="dropdown-menu dropdown-menu-sm">
+                                        <li class="dropdown-title">Select Month</li>
+                                        <li>
+                                            <a href="#" class="dropdown-item">January</a>
+                                        </li>
+                                        <li>
+                                            <a href="#" class="dropdown-item">February</a>
+                                        </li>
+                                        <li>
+                                            <a href="#" class="dropdown-item">March</a>
+                                        </li>
+                                        <li>
+                                            <a href="#" class="dropdown-item">April</a>
+                                        </li>
+                                        <li>
+                                            <a href="#" class="dropdown-item">May</a>
+                                        </li>
+                                        <li>
+                                            <a href="#" class="dropdown-item">June</a>
+                                        </li>
+                                        <li>
+                                            <a href="#" class="dropdown-item">July</a>
+                                        </li>
+                                        <li>
+                                            <a href="#" class="dropdown-item active">August</a>
+                                        </li>
+                                        <li>
+                                            <a href="#" class="dropdown-item">September</a>
+                                        </li>
+                                        <li>
+                                            <a href="#" class="dropdown-item">October</a>
+                                        </li>
+                                        <li>
+                                            <a href="#" class="dropdown-item">November</a>
+                                        </li>
+                                        <li>
+                                            <a href="#" class="dropdown-item">December</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="card-stats-items">
+                                <div class="card-stats-item">
+                                  <div class="card-stats-item-count">24</div>
+                                  <div class="card-stats-item-label">Pending</div>
+                                </div>
+                                <div class="card-stats-item">
+                                  <div class="card-stats-item-count">12</div>
+                                  <div class="card-stats-item-label">Shipping</div>
+                                </div>
+                                <div class="card-stats-item">
+                                  <div class="card-stats-item-count">23</div>
+                                  <div class="card-stats-item-label">Completed</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card-icon shadow-primary bg-primary">
+                            <i class="fas fa-archive"></i>
+                        </div>
+                        <div class="card-wrap">
+                            <div class="card-header">
+                              <h4>Total Orders</h4>
+                            </div>
+                            <div class="card-body">
+                              59
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+      </section>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+</body>
+</html>

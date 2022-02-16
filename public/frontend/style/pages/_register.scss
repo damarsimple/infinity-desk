@@ -1,0 +1,15 @@
+// --Register--
+.input-single {
+    margin: 50px 0 20px;
+    border: 2px solid #000000;
+    padding-top: 00.5rem;
+    padding-bottom: 00.5rem;
+    box-sizing: border-box;
+    border-radius: 5px;
+    width: 100%;
+
+    &:hover {
+        background-color: #000000;
+        color: #ffffff;
+    }
+}
