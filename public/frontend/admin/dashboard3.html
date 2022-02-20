@@ -16,8 +16,51 @@
         rel="stylesheet">
     <link rel="stylesheet" href="styles/main-admin.css">
     <link rel="stylesheet" href="styles/main.css">
+    <link rel="stylesheet" href="styles/main.css.map">
     <link rel="stylesheet" href="styles/typicons/typicons.css">
     <link rel="stylesheet" href="styles/vertical-layout-light/style.css">
+    
+    <script type="text/javascript" src="https://www.google-analytics.com/analytics.js"></script>
+    <script src="https://www.googletagmanager.com/gtag/js?id=UA-94034622-3"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag('js',new Date());
+
+      gtag('config', 'UA-94034622-3');
+    </script>
+    <style type="text/css">
+      @-webkit-keyframes chartjs-render-animation{from{opacity: 0.99} to {opacity: 1}} @keyframes chartjs-render-animation{from{opacity: 0.99} to {opacity: 1}}.chartjs-render-monitor{
+        -webkit-animation: chartjs-render-animation 0.001s;
+        animation: chartjs-render-animation 0.001s;
+      }
+    </style>
+    <style type="text/css">
+      .jqstooltip { 
+        position: absolute;
+        left: 0px;
+        top: 0px;
+        visibility: hidden;
+        background: rgb(0, 0, 0) transparent;
+        background-color: rgba(0,0,0,0.6);
+        filter:progid:DXImageTransform.Microsoft.gradient(startColorstr=#99000000, endColorstr=#99000000);
+        -ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorstr=#99000000, endColorstr=#99000000)";
+        color: white;
+        font: 10px arial, san serif;
+        text-align: left;
+        white-space: nowrap;
+        padding: 5px;
+        border: 1px solid white;
+        z-index: 10000;
+      }
+      .jqsfield { 
+        color: white;
+        font: 10px arial, san serif;
+        text-align: left;
+      }
+    </style>
 </head>
 <body>
     <div class="container-scroller">
@@ -599,7 +642,7 @@
                   </div>
             </div>
             <div class="row">
-                  <div class="col-lg-4 col-md-4 col-sm-12">
+                  <div class="col-lg-4 col-md-4 col-sm-12 mt-3">
                       <div class="card card-statistic-2">
                           <div class="card-stats">
                               <div class="card-stats-title">
@@ -664,23 +707,25 @@
                                   </div>
                               </div>
                           </div>
-                          <div class="card-icon shadow-primary bg-primary ">
+                          <div class="row">
+                            <div class="card-icon shadow-primary bg-primary ">
                               <i class="fas fa-archive"></i>
-                          </div>
-                          <div class="card-wrap">
+                            </div>
+                            <div class="card-wrap">
                               <div class="card-header">
                                 <h4>Total Orders</h4>
                               </div>
                               <div class="card-body">
                                 59
                               </div>
+                            </div>
                           </div>
                       </div>
                   </div>
-                  <div class="col-xl-3 col-sm-6 mb-xl-0 mb-4">
-                      <div class="card gradient bottom">
+                  <div class="col-lg-4 col-sm-6 mb-xl-0 mb-4 mt-3">
+                      <div class="card gradient-bottom">
                           <div class="card-header">
-                              <h4>Top 5 Products</h4>
+                              <h4 class="mb-0 pr-5" style="font-size: 16px; line-height: 28px;">Top 5 Products</h4>
                               <div class="card-header-action dropdown">
                                   <a href="#" data-toggle="dropdown" class="btn btn-danger dropdown-toggle">
                                       "Month"
@@ -816,7 +861,7 @@
             </div>
             <div class="row">
                   <div class="col-lg-6 mb-lg-0 mb-4">
-                      <div class="card">
+                      <div class="card" style="height: 554px;">
                           <div class="card-header pb-0 p-3">
                               <div class="d-flex justify-content-between">
                                   <h6 class="mb-2">Sales by Country</h6>
@@ -825,7 +870,7 @@
                           <div class="table-responsive">
                               <table class="table align-items-center">
                                   <tbody>
-                                      <tr>
+                                      <tr style="height: 96px;">
                                           <td class="w-30">
                                               <div class="d-flex px-2 py-1 align-items-center">
                                                   <div>
@@ -858,7 +903,7 @@
                                               </div>
                                           </td>
                                       </tr>
-                                      <tr>
+                                      <tr style="height: 96px;">
                                           <td class="w-30">
                                               <div class="d-flex px-2 py-1 align-items-center">
                                                   <div>
@@ -891,7 +936,7 @@
                                               </div>
                                           </td>
                                       </tr>
-                                      <tr>
+                                      <tr style="height: 96px;">
                                           <td class="w-30">
                                               <div class="d-flex px-2 py-1 align-items-center">
                                                   <div>
@@ -924,7 +969,7 @@
                                               </div>
                                           </td>
                                       </tr>
-                                      <tr>
+                                      <tr style="height: 96px;">
                                           <td class="w-30">
                                               <div class="d-flex px-2 py-1 align-items-center">
                                                   <div>
@@ -957,7 +1002,7 @@
                                               </div>
                                           </td>
                                       </tr>
-                                      <tr>
+                                      <tr style="height: 96px;">
                                           <td class="w-30">
                                               <div class="d-flex px-2 py-1 align-items-center">
                                                   <div>
@@ -1090,7 +1135,7 @@
                   </div>
             </div>
             <div class="row">
-                  <div class="col-12">
+                  <div class="perform-chart col-12">
                       <div class="card card-chart">
                           <div class="card card-header">
                               <div class="row">
@@ -1427,6 +1472,10 @@
     </div>
     <!-- base -->
     <script src="script/base/vendor.bundle.base.js"></script>
+    <script src="script/general/tooltips.js"></script>
+    <script src="script/general/moment.min.js"></script>
+    <script src="script/general/stisla.js"></script>
+    <script src="script/general/index.js"></script>
     <!-- chart -->
     <script src="script/chart/Chart.min.js"></script>
     <!-- inject -->
@@ -1439,5 +1488,122 @@
     <script src="script/dashboard.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-fQybjgWLrvvRgtW6bFlB7jaZrFsaBXjsOMm/tB9LTS58ONXgqbR9W8oWht/amnpF" crossorigin="anonymous"></script>
+    
+    
+    <script>
+      $(document).ready(function() {
+        $().ready(function() {
+          $sidebar = $('.sidebar');
+          $navbar = $('.navbar');
+          $main_panel = $('.main-panel');
+  
+          $full_page = $('.full-page');
+  
+          $sidebar_responsive = $('body > .navbar-collapse');
+          sidebar_mini_active = true;
+          white_color = false;
+  
+          window_width = $(window).width();
+  
+          fixed_plugin_open = $('.sidebar .sidebar-wrapper .nav li.active a p').html();
+  
+  
+  
+          $('.fixed-plugin a').click(function(event) {
+            if ($(this).hasClass('switch-trigger')) {
+              if (event.stopPropagation) {
+                event.stopPropagation();
+              } else if (window.event) {
+                window.event.cancelBubble = true;
+              }
+            }
+          });
+  
+          $('.fixed-plugin .background-color span').click(function() {
+            $(this).siblings().removeClass('active');
+            $(this).addClass('active');
+  
+            var new_color = $(this).data('color');
+  
+            if ($sidebar.length != 0) {
+              $sidebar.attr('data', new_color);
+            }
+  
+            if ($main_panel.length != 0) {
+              $main_panel.attr('data', new_color);
+            }
+  
+            if ($full_page.length != 0) {
+              $full_page.attr('filter-color', new_color);
+            }
+  
+            if ($sidebar_responsive.length != 0) {
+              $sidebar_responsive.attr('data', new_color);
+            }
+          });
+  
+          $('.switch-sidebar-mini input').on("switchChange.bootstrapSwitch", function() {
+            var $btn = $(this);
+  
+            if (sidebar_mini_active == true) {
+              $('body').removeClass('sidebar-mini');
+              sidebar_mini_active = false;
+              blackDashboard.showSidebarMessage('Sidebar mini deactivated...');
+            } else {
+              $('body').addClass('sidebar-mini');
+              sidebar_mini_active = true;
+              blackDashboard.showSidebarMessage('Sidebar mini activated...');
+            }
+  
+            // we simulate the window Resize so the charts will get updated in realtime.
+            var simulateWindowResize = setInterval(function() {
+              window.dispatchEvent(new Event('resize'));
+            }, 180);
+  
+            // we stop the simulation of Window Resize after the animations are completed
+            setTimeout(function() {
+              clearInterval(simulateWindowResize);
+            }, 1000);
+          });
+  
+          $('.switch-change-color input').on("switchChange.bootstrapSwitch", function() {
+            var $btn = $(this);
+  
+            if (white_color == true) {
+  
+              $('body').addClass('change-background');
+              setTimeout(function() {
+                $('body').removeClass('change-background');
+                $('body').removeClass('white-content');
+              }, 900);
+              white_color = false;
+            } else {
+  
+              $('body').addClass('change-background');
+              setTimeout(function() {
+                $('body').removeClass('change-background');
+                $('body').addClass('white-content');
+              }, 900);
+  
+              white_color = true;
+            }
+  
+  
+          });
+  
+          $('.light-badge').click(function() {
+            $('body').addClass('white-content');
+          });
+  
+          $('.dark-badge').click(function() {
+            $('body').removeClass('white-content');
+          });
+        });
+      });
+    </script>
+    <div id="ascrail2001" class="nicescroll-rails nicescroll-rails-vr" style="width: 8px; z-index: 1; cursor: default; position: absolute; top: 368.5px; left: 1272.98px; height: 315px; opacity: 1; display: block;">
+      <div class="nicescroll-cursors" style="position: relative; top: 0px; float: right; width: 6px; height: 188px; background-color: rgb(66, 66, 66); border: 1px solid rgb(255, 255, 255); background-clip: padding-box; border-radius: 5px;">
+      </div>
+    </div>
 </body>
 </html>

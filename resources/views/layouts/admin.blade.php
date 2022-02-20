@@ -12,7 +12,7 @@
 </head>
 <body>
     @include('admin.navbar')
-    @include('admin.navbar')
+    @include('admin.sidebar')
         @yield('content')
     @include('admin.footer')
 

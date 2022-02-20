@@ -3,8 +3,8 @@
     <nav class="navbar col-lg-12 col-12 p-0 fixed-top d-flex flex-row">
       <div class="navbar-brand-wrapper d-flex justify-content-center">
         <div class="navbar-brand-inner-wrapper d-flex justify-content-between align-items-center w-100">
-            <a class="navbar-brand brand-logo" href="dashboard3.html">
-                <img src="../img/figma-icon/Infinity Desk (1) 1.svg" alt="logo"/>
+            <a class="navbar-brand brand-logo" href="{{ route('index') }}">
+                <img src="{{ url('frontend/images/figma-icon/Infinity Desk (1) 1.svg') }}" alt="logo"/>
                 Infinity Desk
             </a>
           <!-- <a class="navbar-brand brand-logo-mini" href="index.html">
@@ -21,7 +21,7 @@
         <ul class="navbar-nav mr-lg-2">
           <li class="nav-item nav-profile dropdown">
             <a class="nav-link" href="#" data-toggle="dropdown" id="profileDropdown">
-              <img src="../img/Ellipse 7.png" alt="profile"/>
+              <img src="{{ url('frontend/images/Ellipse 7.png') }}" alt="profile"/>
               <span class="nav-profile-name">Gawin Caskey</span>
             </a>
           </li>
@@ -39,7 +39,7 @@
             <li class="nav-item">
                 <a class="nav-link px-3" href="#">
                     <div class="nav-item text-nowrap">
-                            <img src="../img/figma-icon/icon_14.svg" alt="..." width="24" height="24" 
+                            <img src="{{ url('frontend/images/figma-icon/icon_14.svg') }}" alt="..." width="24" height="24" 
                             viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
                             stroke-linecap="round" stroke-linejoin="round" class="feather feather-home"
                             aria-hidden="true">

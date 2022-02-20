@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\Admin\DashboardController;
 use Illuminate\Support\Facades\Route;
 
 use App\Http\Controllers\Authorization\LoginController;
@@ -51,4 +52,10 @@ Route::prefix('/dashboard')->group(function () {
     Route::resource('carts', CartController::class);
     Route::resource('promos', PromoController::class);
     Route::resource('changes', ChangeController::class);
+});
+
+Route::prefix('/admin')->group(function () {
+    Route::prefix('/dashboard')->group(function () {
+        Route::resource('/', DashboardController::class);
+    });
 });
