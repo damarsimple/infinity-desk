@@ -1,6 +1,8 @@
 <?php
 
+use App\Http\Controllers\Admin\CustomerController;
 use App\Http\Controllers\Admin\DashboardController;
+use App\Http\Controllers\Admin\PartnerController;
 use Illuminate\Support\Facades\Route;
 
 use App\Http\Controllers\Authorization\LoginController;
@@ -46,16 +48,38 @@ Route::post('/register', [RegisterController::class, 'handleRegister'])->name('r
 // User Dashboard
 
 Route::prefix('/dashboard')->group(function () {
-    Route::resource('products', ProductController::class);
-    Route::resource('reviews', ReviewController::class);
-    Route::resource('procurements', ProcurementController::class);
-    Route::resource('carts', CartController::class);
-    Route::resource('promos', PromoController::class);
-    Route::resource('changes', ChangeController::class);
+    Route::prefix('/user')->group(function () {
+        Route::prefix('/profile')->group(function () {
+            // Route::resource('profileSetting',);
+            // Route::resource('addressList',);
+            // Route::resource('payment',);
+            // Route::resource('card',);
+            // Route::resource('notification',);
+            // Route::resource('security',);
+        });
+        // Route::resource('wishlist',);
+        // Route::resource('outletFavorite');
+    });
+    Route::prefix('/purchase')->group(function () {
+        Route::resource('carts', CartController::class);
+        Route::resource('promos', PromoController::class);
+        Route::resource('procurements', ProcurementController::class);
+    });
+    Route::prefix('/inbox')->group(function () {
+        Route::resource('reviews', ReviewController::class);
+        // Route::resource('complaints',)
+        // Route::resource('update',)
+    });
 });
 
 Route::prefix('/admin')->group(function () {
     Route::prefix('/dashboard')->group(function () {
         Route::resource('/', DashboardController::class);
+    });
+    Route::prefix('/customer')->group(function () {
+        Route::resource('customer-data', CustomerController::class);
+    });
+    Route::prefix('/customer')->group(function () {
+        Route::resource('partner-data', PartnerController::class);
     });
 });
