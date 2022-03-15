@@ -3,112 +3,139 @@
 @section('title','Home')
 
 @section('content')
-<div class="vc_empty_space furniture_custom" style="height: 50px; background-color:#f2f2f2;">
-  <span class="vc_empty_space_inner"></span>
-</div>
 <section class="py-16 px-4" id="product-category">
-  <div class="container text-center" style="padding-top: 70px;">
-    <div class="card-group" >
-      <div class="card">
-        <img src="{{ url('frontend/images/img_category_1.png') }}" class="card-img-top" alt="...">
-      </div>
-      <div class="card">
-        <img src="{{ url('frontend/images/img_category_2.png') }}" class="card-img-top" alt="...">
-      </div>
-      <div class="card">
-        <img src="{{ url('frontend/images/img_category_3.png') }}" class="card-img-top" alt="...">
-      </div>
-    </div>
-  </div>
-</section>
-<section class="px-4" id="category-product">
-  <div class="container mx-auto">
-    <div class="mb-4">
-      <h3 class="text-2xl capitalize font-semibold text-lg-center">
-        Trending <br class="" />
-        <span style="color: #aa9539;" class="font-bold">Product</span>
-      </h3>
-    </div>
-  </div>
-  <div class="card-product">
-    @foreach($trendings as $product)
-    <div class="card me-3">
-      <img src="{{ url('frontend/images/img_product_3.png') }}" alt="" class="card__img mb-3">
-      <div class="card__data">
-        <h1 class="card__title">{{ $product->name }}</h1>
-        <p class="card__description">{{ $product->description }}</p>
-        <span class="card__preci">{{ $product->formattedPrice }}</span>
-        <a href="#" class="card__button">Buy Now</a>
-      </div>
-    </div>
-    @endforeach
-  </div>
-</section>
-<div class="vc_empty_space furniture_custom" style="height: 50px; background-color:#f2f2f2;">
-  <span class="vc_empty_space_inner"></span>
-</div>
-<section class="px-4" id="product-category">
-  <div class="container mx-auto">
-    <div class="flex flex-start mb-4">
-      <h3 class="text-2xl capitalize font-semibold text-lg-center">
-        Category <br class="" /> Product
-      </h3>
-    </div>
-    <div class="card-group">
-      <div class="card">
-        <img src="{{ url('frontend/images/img_category_1.png') }}" class="card-img-top" alt="...">
-      </div>
-      <div class="card">
-        <img src="{{ url('frontend/images/img_category_2.png') }}" class="card-img-top" alt="...">
-      </div>
-      <div class="card">
-        <img src="{{ url('frontend/images/img_category_3.png') }}" class="card-img-top" alt="...">
-      </div>
-    </div>
-  </div>
-</section>
-<div class="vc_empty_space furniture_custom" style="height: 50px; background-color:#f2f2f2;">
-  <span class="vc_empty_space_inner"></span>
-</div>
-<section id="product-list">
-  <div class="container">
-    <div class="b-4">
-      <h3 class="text-center">
-        Our <br class="" /> Product
-      </h3>
-    </div>
-    <div class="row">
-      <div class="col-lg-3">
-        @foreach($ours->chunk(4) as $productChunks)
-        <div class="card-group">
-          @foreach($productChunks as $product)
-          <div class="card mb-3" style="max-width: 540px;">
-            <div class="row g-0">
-              <div class="col-md-4">
-                <img src="{{ url('frontend/images/img_product_O_8.png') }}" class="img-fluid rounded-start" alt="...">
-              </div>
-              <div class="col-md-8">
-                <div class="card-body">
-                  <h5 class="card-title">{{ $product->name }}</h5>
-                  <p class="card__description">{{ $product->description }}</p>
-                  <span class="card__preci">{{ $product->formattedPrice }}</span>
-                  <p class="card__place">{{ $product->seller->name }}</p>
-                  <a href="#" class="card__button">Buy Now</a>
+    <div class="container text-center" style="padding-top: 70px">
+        <div class="category-wrapper text-center">
+            <div class="category-content">
+                <div class="row justify-content-center">
+                    <div class="col-lg-4 col-md-4 col-sm-6">
+                        <a href="#">
+                            <img src="{{ url('frontend/images/banner.png') }}" class="img-fluid mb-sm-3 mb-3"
+                                alt="..." />
+                        </a>
+                    </div>
+                    <div class="col-lg-4 col-md-4 col-sm-6">
+                        <a href="#">
+                            <img src="{{ url('frontend/images/banner.png') }}" class="img-fluid mb-sm-3 mb-3"
+                                alt="..." />
+                        </a>
+                    </div>
+                    <div class="col-lg-4 col-md-4 col-sm-6">
+                        <a href="#">
+                            <img src="{{ url('frontend/images/banner.png') }}" class="img-fluid mb-sm-3 mb-3"
+                                alt="..." />
+                        </a>
+                    </div>
                 </div>
-                <div class="card-footer">
-                  <small class="text-muted">Last Update {{ $product->updated_at->diffForHumans() }}</small>
-                </div>
-              </div>
             </div>
-          </div>
-          @endforeach
+        </div>
+    </div>
+</section>
+
+
+<section class="px-4" id="category-product">
+    <div class="container mx-auto">
+        <div class="mb-4 text-center">
+            <h3 class="header">
+                Trending
+            </h3>
+            <h4 class="header-title">Product</h4>
+        </div>
+    </div>
+    <div class="card-product">
+        @foreach($trendings as $product)
+        <div class="card me-3">
+            <a href="#">
+                <img src="{{ url('frontend/images/img_product_1.png') }}" alt="" class="card__img mb-3" />
+            </a>
+            <div class="card__data">
+                <h1 class="card__title">{{ $product->name }}</h1>
+                <p class="card__description">{{ $product->description }}</p>
+                <span class="card__price">{{ $product->formattedPrice }}</span>
+            </div>
         </div>
         @endforeach
-      </div>
     </div>
-  </div>
 </section>
-<div class="vc_empty_space furniture_custom" style="height: 50px; background-color:#f2f2f2;">
-  <span class="vc_empty_space_inner"></span>
-</div>
+
+<section class="px-4" id="product-category">
+    <div class="container mx-auto">
+        <div class="container mx-auto">
+            <div class="mb-4 text-center">
+                <h3 class="header">
+                    Category
+                </h3>
+                <h4 class="header-title">Product</h4>
+            </div>
+        </div>
+        <section class="py-16 px-4" id="product-category">
+            <div class="container text-center">
+                <div class="category-wrapper text-center">
+                    <div class="category-content">
+                        <div class="row justify-content-center">
+                            <div class="col-lg-4 col-md-4 col-sm-6">
+                                <a href="#">
+                                    <img src="{{ url('frontend/images/img_category_1.png') }}"
+                                        class="img-fluid mb-sm-3 mb-3" alt="..." />
+                                </a>
+                            </div>
+                            <div class="col-lg-4 col-md-4 col-sm-6">
+                                <a href="#">
+                                    <img src="{{ url('frontend/images/img_category_2.png') }}"
+                                        class="img-fluid mb-sm-3 mb-3" alt="..." />
+                                </a>
+                            </div>
+                            <div class="col-lg-4 col-md-4 col-sm-6">
+                                <a href="#">
+                                    <img src="{{ url('frontend/images/img_category_3.png') }}"
+                                        class="img-fluid mb-sm-3 mb-3" alt="..." />
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+</section>
+
+
+
+<section id="product-list">
+    <div class="container">
+        <div class="mb-4 text-center">
+            <h3 class="header">
+                Our
+            </h3>
+            <h3 class="header-title">
+                Product
+            </h3>
+        </div>
+        <div class="row">
+            @foreach($ours->chunk(2) as $productChunks)
+            <div class="col-lg-3">
+                @foreach($productChunks as $product)
+                <div class="product__inner">
+                    <div class="d-flex">
+                        <div class="section_img_product pe-2">
+                            <a href="">
+                                <img src="{{ url('frontend/images/product-sm.png') }}" alt="" />
+                            </a>
+                        </div>
+                        <div class="section__details">
+                            <div class="category__product">{{ $product->name }}</div>
+                            <div class="title__product">{{ $product->description }}</div>
+                            <div class="owner__product">{{ $product->seller->name }}</div>
+                            <div class="price">{{ $product->formattedPrice }}</div>
+                            <small class="text-muted">
+                              Last Update {{ $product->updated_at->diffForHumans() }}</small>
+                        </div>
+                    </div>
+                </div>
+                @endforeach
+            </div>
+            @endforeach
+        </div>
+    </div>
+</section>
 @endsection

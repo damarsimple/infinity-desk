@@ -30,10 +30,10 @@
 	});
 </script>
 
-<script src="{{ url('frontend/admin/script/customer/owl.carousel.min.js') }}"></script>
+{{-- <script src="{{ url('frontend/admin/script/customer/owl.carousel.min.js') }}"></script>
 <script src="{{ url('frontend/admin/script/customer/metisMenu.min.js') }}"></script>
 <script src="{{ url('frontend/admin/script/customer/jquery.slimscroll.min.js') }}"></script>
-<script src="{{ url('frontend/admin/script/customer/jquery.slicknav.min.js') }}"></script>
+<script src="{{ url('frontend/admin/script/customer/jquery.slicknav.min.js') }}"></script> --}}
 
 <!-- Start datatable js -->
 <script src="https://cdn.datatables.net/buttons/1.5.2/js/buttons.print.min.js"></script>
@@ -56,9 +56,9 @@ ZC.LICENSE = ["569d52cefae586f634c54f86dc99e6a9", "ee6b7db5b51705a13dc2339db3eda
 </script>
 
 <!-- all line chart activation -->
-<script src="{{ url('frontend/admin/script/customer/line-chart.js') }}"></script>
+{{-- <script src="{{ url('frontend/admin/script/customer/line-chart.js') }}"></script>
 <!-- all pie chart -->
 <script src="{{ url('frontend/admin/script/customer/pie-chart.js') }}"></script>
 <!-- others plugins -->
 <script src="{{ url('frontend/admin/script/customer/plugins.js') }}"></script>
-<script src="{{ url('frontend/admin/script/customer/scripts.js') }}"></script>
+<script src="{{ url('frontend/admin/script/customer/scripts.js') }}"></script> --}}

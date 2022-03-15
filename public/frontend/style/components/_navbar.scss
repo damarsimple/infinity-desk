@@ -13,6 +13,8 @@
 
   .nav-item {
     padding-right: 50px;
+    display: flex;
+    align-items: center;
 
     .nav-link {
       font-size: 18px;
@@ -37,9 +39,5 @@
     }
   }
 
-  .btn-login {
-    border: 2px solid #0b0b0b;
-    box-sizing: border-box;
-    border-radius: 5px;
-  }
+
 }

@@ -8,11 +8,11 @@
     rel="stylesheet">
   <link rel="stylesheet" href="{{ url('frontend/style/main.css') }}">
 
-  <link rel="stylesheet" href="{{ url('frontend/admin/styles/customer/font-awesome.min.css') }}">
+  {{-- <link rel="stylesheet" href="{{ url('frontend/admin/styles/customer/font-awesome.min.css') }}">
   <link rel="stylesheet" href="{{ url('frontend/admin/styles/customer/themify-icons.css') }}">
   <link rel="stylesheet" href="{{ url('frontend/admin/styles/customer/metisMenu.css') }}">
   <link rel="stylesheet" href="{{ url('frontend/admin/styles/customer/owl.carousel.min.css') }}">
-  <link rel="stylesheet" href="{{ url('frontend/admin/styles/customer/slicknav.min.css') }}">
+  <link rel="stylesheet" href="{{ url('frontend/admin/styles/customer/slicknav.min.css') }}"> --}}
 
 
   <!-- amchart css -->
@@ -25,7 +25,7 @@
     <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/responsive/2.2.3/css/responsive.jqueryui.min.css">
 	<link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/buttons/1.5.2/css/buttons.dataTables.min.css">
 
-  <link rel="stylesheet" href="{{ url('frontend/admin/styles/customer/typography.css') }}">
+  {{-- <link rel="stylesheet" href="{{ url('frontend/admin/styles/customer/typography.css') }}">
   <link rel="stylesheet" href="{{ url('frontend/admin/styles/customer/default-css.css') }}">
   <link rel="stylesheet" href="{{ url('frontend/admin/styles/customer/styles.css') }}">
-  <link rel="stylesheet" href="{{ url('frontend/admin/styles/customer/responsive.css') }}">
+  <link rel="stylesheet" href="{{ url('frontend/admin/styles/customer/responsive.css') }}"> --}}
