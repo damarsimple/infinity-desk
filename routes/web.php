@@ -14,10 +14,13 @@ use App\Http\Controllers\Frontend\DetailController;
 
 use App\Http\Controllers\UserDashboard\CartController;
 use App\Http\Controllers\UserDashboard\ChangeController;
+use App\Http\Controllers\UserDashboard\OutletController;
 use App\Http\Controllers\UserDashboard\ProcurementController;
 use App\Http\Controllers\UserDashboard\ProductController;
 use App\Http\Controllers\UserDashboard\PromoController;
 use App\Http\Controllers\UserDashboard\ReviewController;
+use App\Http\Controllers\UserDashboard\ViewController;
+use App\Http\Controllers\UserDashboard\WishlistController;
 
 /*
 |--------------------------------------------------------------------------
@@ -50,15 +53,11 @@ Route::post('/register', [RegisterController::class, 'handleRegister'])->name('r
 Route::prefix('/dashboard')->group(function () {
     Route::prefix('/user')->group(function () {
         Route::prefix('/profile')->group(function () {
-            // Route::resource('profileSetting',);
-            // Route::resource('addressList',);
-            // Route::resource('payment',);
-            // Route::resource('card',);
-            // Route::resource('notification',);
-            // Route::resource('security',);
+            Route::resource('change', ChangeController::class);
         });
-        // Route::resource('wishlist',);
-        // Route::resource('outletFavorite');
+        Route::resource('wishlist', WishlistController::class);
+        Route::resource('outletFavorite', OutletController::class);
+        Route::resource('recent-view', ViewController::class);
     });
     Route::prefix('/purchase')->group(function () {
         Route::resource('carts', CartController::class);

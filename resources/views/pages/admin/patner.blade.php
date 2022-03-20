@@ -17,9 +17,10 @@
                                     <thead>
                                         <tr>
                                             <th>No</th>
-                                            <th>Customer</th>
-                                            <th>No. Telepon</th>
-                                            <th>Birth Date</th>
+                                            <th>Company</th>
+                                            <th>Responsible Person</th>
+                                            <th>Role</th>
+                                            <th>Contact Person</th>
                                             <th>Email</th>
                                             <th>Country</th>
                                             <th>Edit</th>
