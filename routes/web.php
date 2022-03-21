@@ -1,8 +1,11 @@
 <?php
 
+use App\Http\Controllers\Admin\AnalyticalController;
 use App\Http\Controllers\Admin\CustomerController;
 use App\Http\Controllers\Admin\DashboardController;
 use App\Http\Controllers\Admin\PartnerController;
+use App\Http\Controllers\Admin\ReviewController as AdminReviewController;
+use App\Http\Controllers\Admin\TransactionController;
 use Illuminate\Support\Facades\Route;
 
 use App\Http\Controllers\Authorization\LoginController;
@@ -19,6 +22,7 @@ use App\Http\Controllers\UserDashboard\ProcurementController;
 use App\Http\Controllers\UserDashboard\ProductController;
 use App\Http\Controllers\UserDashboard\PromoController;
 use App\Http\Controllers\UserDashboard\ReviewController;
+use App\Http\Controllers\UserDashboard\UpdateController;
 use App\Http\Controllers\UserDashboard\ViewController;
 use App\Http\Controllers\UserDashboard\WishlistController;
 
@@ -67,7 +71,7 @@ Route::prefix('/dashboard')->group(function () {
     Route::prefix('/inbox')->group(function () {
         Route::resource('reviews', ReviewController::class);
         // Route::resource('complaints',)
-        // Route::resource('update',)
+        Route::resource('update', UpdateController::class);
     });
 });
 
@@ -80,5 +84,14 @@ Route::prefix('/admin')->group(function () {
     });
     Route::prefix('/customer')->group(function () {
         Route::resource('partner-data', PartnerController::class);
+    });
+    Route::prefix('transaction')->group(function () {
+        Route::resource('/', TransactionController::class);
+    });
+    Route::prefix('/reports')->group(function () {
+        Route::resource('analytic', AnalyticalController::class);
+    });
+    Route::prefix('/reviews')->group(function () {
+        Route::resource('/', AdminReviewController::class);
     });
 });

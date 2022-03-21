@@ -17,13 +17,13 @@
                                             <div class="collapse" id="inbox">
                                                 <ul class="nav flex-column sub-menu">
                                                     <li class="nav-item">
-                                                        <a href="reviews.html" class="nav-link">Reviews</a>
+                                                        <a href="{{ route('reviews.index') }}" class="nav-link">Reviews</a>
                                                     </li>
                                                     <li class="nav-item">
                                                         <a href="#" class="nav-link">Complaints</a>
                                                     </li>
                                                     <li class="nav-item">
-                                                        <a href="#" class="nav-link">Updates</a>
+                                                        <a href="{{ route('update.index') }}" class="nav-link">Updates</a>
                                                     </li>
                                                 </ul>
                                             </div>
@@ -37,7 +37,7 @@
                                             <div class="collapse" id="purchase">
                                                 <ul class="nav flex-column sub-menu">
                                                     <li class="nav-item">
-                                                        <a href="#" class="nav-link">Carts</a>
+                                                        <a href="{{ route('carts.index') }}" class="nav-link">Carts</a>
                                                     </li>
                                                     <li class="nav-item">
                                                         <a href="#" class="nav-link">Promos</a>
@@ -57,14 +57,13 @@
                                             <div class="collapse" id="user">
                                                 <ul class="nav flex-column sub-menu">
                                                     <li class="nav-item">
-                                                        <a href="#" class="nav-link">WishList</a>
+                                                        <a href="{{ route('wishlist.index') }}" class="nav-link">WishList</a>
                                                     </li>
                                                     <li class="nav-item">
-                                                        <a href="#" class="nav-link">Favorite Outlet</a>
+                                                        <a href="{{ route('outletFavorite.index') }}" class="nav-link">Favorite Outlet</a>
                                                     </li>
                                                     <li class="nav-item">
-                                                        <a href="user" class="nav-link active"
-                                                            aria-current="page">Setting</a>
+                                                        <a href="{{ route('change.index') }}" class="nav-link active" aria-current="page">Setting</a>
                                                     </li>
                                                 </ul>
                                             </div>

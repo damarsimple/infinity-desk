@@ -10,7 +10,7 @@
                     <div class="card">
                         <div class="card-block">
                             <div class="card-title d-sm-flex justify-content-between align-items-center">
-                                <h2 class="mt-2" style="align-items: center;">Customer List</h2>
+                                <h2 class="mt-2" style="align-items: center;">Partner List</h2>
                             </div>
                             <div class="table-responsive m-t-40 with-360 div_transition">
                                 <table class="table table-striped table-borderless">
