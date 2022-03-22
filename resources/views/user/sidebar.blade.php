@@ -63,7 +63,7 @@
                                                         <a href="{{ route('outletFavorite.index') }}" class="nav-link">Favorite Outlet</a>
                                                     </li>
                                                     <li class="nav-item">
-                                                        <a href="{{ route('change.index') }}" class="nav-link active" aria-current="page">Setting</a>
+                                                        <a href="{{ route('index') }}" class="nav-link active" aria-current="page">Setting</a>
                                                     </li>
                                                 </ul>
                                             </div>

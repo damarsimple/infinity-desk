@@ -57,7 +57,7 @@ Route::post('/register', [RegisterController::class, 'handleRegister'])->name('r
 Route::prefix('/dashboard')->group(function () {
     Route::prefix('/user')->group(function () {
         Route::prefix('/profile')->group(function () {
-            Route::resource('change', ChangeController::class);
+            Route::resource('/', ChangeController::class);
         });
         Route::resource('wishlist', WishlistController::class);
         Route::resource('outletFavorite', OutletController::class);

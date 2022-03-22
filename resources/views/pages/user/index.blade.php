@@ -1,7 +1,7 @@
 @extends('layouts.user')
 @section('content')
 <div class="right-side col-lg-8 col-md-9 mb-lg-3">
-                            <div class="card" style="width: 888px;">
+                            <div class="card" style="width: 888px; height:960px;">
                                 <div class="card-header border-bottom mb-3">
                                     <ul class="nav nav-tabs" id="myTab" role="tablist">
 
@@ -413,7 +413,7 @@
                                                         placeholder="Type Address or Receiver..."
                                                         onfocus="focused(this)" onfocusout="defocused(this)">
                                                 </div>
-                                                <button class="btn btn-primary mt-4" style="margin-left: 20rem;" data-bs-toggle="modal" data-bs-target="#addAddress">Add New Address</button>
+                                                <button class="btn btn-primary mt-4" style="margin-left: 15rem;" data-bs-toggle="modal" data-bs-target="#addAddress">Add New Address</button>
                                                 <div class="modal fade" id="addAddress" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="addAddress" aria-hidden="true">
                                                     <div class="modal-dialog">
                                                         <div class="modal-content">
@@ -490,7 +490,7 @@
                                             </div>
                                             <ul class="mt-4">
                                                 <li>
-                                                    <div class="card mb-3" style="line-height: 0.5;">
+                                                    <div class="card mb-3 pt-1" style="line-height: 1.5; height:180px; width:765px;">
                                                         <div class="card-body">
                                                             <h6>
                                                                 <strong>Rumah</strong>
@@ -592,7 +592,7 @@
                                                     </div>
                                                 </li>
                                                 <li>
-                                                    <div class="card mb-4" style="line-height: 0.5;">
+                                                    <div class="card mb-4 pt-1" style="line-height: 1.5; height:180px; width:765px;">
                                                         <div class="card-body">
                                                             <h6><strong>Rumah</strong></h6>
                                                             <p><strong>Gawin Caskey</strong></p>
@@ -787,8 +787,8 @@
                                                                                 </div>
                                                                             </div>
                                                                             <div class="col-lg-5 col-xlg-6 col-md-4">
-                                                                                <div class="right">
-                                                                                    <p>PT.BCA (BANK CENTRAL ASIA) TBK
+                                                                                <div class="right mt-4" style="line-height: .85">
+                                                                                    <p style="font-size: 13px">PT.BCA (BANK CENTRAL ASIA) TBK
                                                                                     </p>
                                                                                     <h4>0353120848</h4>
                                                                                     <p>a.n<span><strong>GAWIN
@@ -804,7 +804,7 @@
                                                                 </div>
                                                             </div>
                                                         </div>
-                                                        <div class="col-lg-5">
+                                                        <div class="col">
                                                             <button class="btn btn-dark">Remove</button>
                                                         </div>
                                                     </div>

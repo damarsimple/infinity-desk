@@ -9,3 +9,13 @@
     rel="stylesheet">
 <link href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" rel="stylesheet">
 <link rel="stylesheet" href="{{ url('frontend/style/main.css') }}">
+<style>
+    /* Style to reverse the caret icon from pointing downwards to upwards */
+    .caret.caret-up {
+        border-top-width: 0;
+        border-bottom: 4px solid #fff;
+    }
+    .dropdown-toggle::after{
+        display: none;
+    }
+</style>
