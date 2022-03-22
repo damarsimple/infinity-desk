@@ -9,7 +9,7 @@
                                 <nav class="nav flex-column d-block">
                                     <ul class="nav">
                                         <li class="nav-item">
-                                            <a data-toggle="collapse" href="#inbox" class="nav-link">
+                                            <a data-bs-toggle="collapse" href="#inbox" class="nav-link" role="button">
                                                 <i class="fas fa-comment-edit"></i>
                                                 <span class="menu-title">Inbox</span>
                                                 <i class="bi bi-plus-circle-fill menu-arrow"></i>
@@ -29,7 +29,7 @@
                                             </div>
                                         </li>
                                         <li class="nav-item">
-                                            <a data-toggle="collapse" href="#purchase" class="nav-link">
+                                            <a data-bs-toggle="collapse" href="#purchase" class="nav-link" role="button">
                                                 <i class="fas fa-comment-edit"></i>
                                                 <span class="menu-title">Purchase</span>
                                                 <i class="bi bi-plus-circle-fill menu-arrow"></i>
@@ -49,7 +49,7 @@
                                             </div>
                                         </li>
                                         <li class="nav-item">
-                                            <a data-toggle="collapse" href="#user" class="nav-link">
+                                            <a data-bs-toggle="collapse" href="#user" class="nav-link" role="button">
                                                 <i class="bi bi-person-circle menu-icon"></i>
                                                 <span class="menu-title">User</span>
                                                 <i class="bi bi-plus-circle-fill menu-arrow"></i>

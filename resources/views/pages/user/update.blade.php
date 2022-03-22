@@ -5,10 +5,10 @@
         <div class="card-header border-bottom mb-3">
             <ul class="nav nav-tabs card-header-tabs nav-fill">
                 <li class="nav-item active">
-                    <a data-toggle="tab" href="#transaction" class="nav-link active mr-1">Transaction</a>
+                    <a data-bs-toggle="tab" data-bs-target="#transaction" class="nav-link active mr-1" aria-controls="address" aria-selected="false" role="tab" >Transaction</a>
                 </li>
                 <li class="nav-item">
-                    <a data-toggle="tab" href="#update" class="nav-link mr-1">Update</a>
+                    <a data-bs-toggle="tab" data-bs-target="#update" class="nav-link mr-1" aria-controls="address" aria-selected="false" role="tab">Update</a>
                 </li>
             </ul>
         </div>
