@@ -799,7 +799,7 @@
                                                                         </div>
                                                                     </div>
                                                                     <div class="card-back" hidden>
-                                                                        <img src="img/bca_img.jpg" alt="BCA...">
+                                                                        <img src="{{ url('frontend/images/bca_img.jpg') }}" alt="BCA...">
                                                                     </div>
                                                                 </div>
                                                             </div>
