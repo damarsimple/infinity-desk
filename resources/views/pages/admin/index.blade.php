@@ -168,9 +168,6 @@
                           </div>
                       </div>
                       <div class="row">
-                        <div class="card-icon shadow-primary bg-primary ">
-                          <i class="fas fa-archive"></i>
-                        </div>
                         <div class="card-wrap">
                           <div class="card-header">
                             <h4>Total Orders</h4>
@@ -207,7 +204,7 @@
                               </ul>
                           </div>
                       </div>
-                      <div class="card-body" id="top-5-scroll" tabindex="2" style="height: 315px; overflow: hidden; outline: none;">
+                      <div class="card-body" id="top-5-scroll" tabindex="2" style="height: 315px; overflow: auto; outline: none;">
                           <ul class="list-unstyled list-unstyled-border">
                               <li class="media">
                                   <img src="..." alt="product" width="55" class="mr-3 rounded">

@@ -1804,4 +1804,30 @@ a dropdown-item:active {
     opacity: 0;
   }
 }
+
+.cursor-pointer {
+  cursor: pointer;
+}
+
+with-360 {
+  width: 360px;
+}
+
+with_50_per {
+  width: 90px;
+}
+
+.div_transition tr[name="tr-edit"] {
+  background: #c2d1f0;
+  -webkit-transition: width 2s, height 2s, -webkit-transform 2s;
+  transition: width 2s, height 2s, -webkit-transform 2s;
+  transition: width 2s, height 2s, transform 2s;
+  transition: width 2s, height 2s, transform 2s, -webkit-transform 2s;
+}
+
+.div_transition tr[name="tr-edit"]:hover {
+  background: #ffbf80;
+  -webkit-transition: rotate(360deg);
+  transition: rotate(360deg);
+}
 /*# sourceMappingURL=main-admin.css.map */

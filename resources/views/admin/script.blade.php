@@ -138,3 +138,280 @@
     });
   });
 </script>
+
+
+<script>
+  var random_color = randColor();
+  function randColor(){
+    return colors[Math, floor(Math.random()*colors.length)];
+  }
+  $(document).on
+  ("click",
+  ".div_edit_table_parent .btn_them_edit_table",
+    (e) => {
+      random_color = randColor();
+        $('.div_transition').css('background',
+        random_color);
+        var element = $(e.target);
+        if (element.hasClass("color-black"))
+        return;
+        var parent =
+        element.closest(".div_edit_table_parent");
+        var table = parent.find("table");
+        var tbody = $(table).find("tbody");
+        var elementCheck = $(table).find('tr[name="tr-edit"]');
+        var check = 
+        window.CheckLengthOfElement(elementCheck);
+          if(check === "-1") return;
+          else{
+            if(check==="0"){
+              XuLyEditFunc(table,null,tbody);
+            }
+            else{
+              alert(
+                "You have a row that are not 
+                saving, please save or close 
+                that before Continue"
+              );
+            }
+          }
+    });
+    function CheckLengthOfElement(element){
+      if(!element) return "-1";
+      else{
+        return element.length > 0 ? "1" : "0";
+      }
+    }
+
+    function XuLyEditFunc(table, dataArr, tbody) {
+    var fnhtmlName = $(table).attr("data-html");
+    var html = window[fnhtmlName](dataArr); // call function dynamic
+    if (dataArr) {
+        tbody.find("tr[name!='tr-edit']").each
+        ((index, obj) => {
+            var thisElement = $(obj);
+            if (dataArr.id == thisElement.attr("data-id")) {
+                thisElement.after(html);
+                thisElement.addClass("hidden");
+            }
+        });
+    } else {
+        window.AppendDiv(tbody, html);
+             random_color = randColor();
+          $('.div_transition').css('background', random_color);
+    }
+
+};
+function html_gen_edit_trinh_do(data) {
+    var html = "";
+    html += '   <tr ' + (data ? "data-id=\"" + data.id + "\"" : "data-id=0") + ' class="font-size-13"  name="tr-edit">';
+    html += "    <td>";
+    html += '<input  min = 1 step="1" name="id" oninput="validity.valid||(value=\'\');" class="with_50_per syt-radius-3 min-h-30 paddingMin txt_nam_tot_nghiep"' +
+        ' type="number"' +
+        (data ? "value=\"" + data.id + "\"" : "") +
+        "/>";
+    html += "    </td>";
+    html += "   <td>";
+        html += '    <input name="truong_dao_tao" class="with_50_per syt-radius-3 min-h-30 paddingMin txt_truong_dao_tao"' +
+        ' type="text" ' +
+        (data ? "value=\"" + data.truong_dao_tao + "\"" : "") +
+        " />";
+    html += "    </td>";
+    html += "   <td>";
+  html += '<input  min = 1 step="1" name="name_tot_nghiep" oninput="validity.valid||(value=\'\');" class="with_50_per syt-radius-3 min-h-30 paddingMin txt_nam_tot_nghiep"' +
+        ' type="number"' +
+        (data ? "value=\"" + data.nam_tot_nghiep + "\"" : "") +
+        "/>";
+    html += "   </td>";
+    html += "  <td>";
+    html += '   <div class="show-inline cursor-pointer min-h-30 mt-mobile-5">';
+    html += '   <span class="glyphicon glyphicon-ok syt-icon-save" ' +
+        'title="Save" onclick="fn_save_edit(this)"></span>';
+    html += "   </div>";
+    html += "  </td>";
+    html += "   <td >";
+    html += '    <div class="show-inline cursor-pointer min-h-30 mt-mobile-5">';
+    html += '    <span type="button" title="Cancel"  onclick="fn_cancel_edit(this)"' +
+        ' class="glyphicon glyphicon-remove syt-icon-cancel"/>';
+    html += "  </div>";
+    html += "   </td>";
+    html += "   </tr> ";
+    return html;
+};
+function AppendDiv(element, html) {
+           random_color = randColor();
+          $('.div_transition').css('background', random_color);
+    element.append(html).hide().show('slow');
+};
+function fn_cancel_edit(e) {
+         $('.div_transition').css('background', random_color);
+    var element = $(e);
+    var table = element.closest("table");
+    var tbody = element.closest("tbody");
+    var trParent = element.closest("tr");
+    var dataId = trParent.attr("data-id");
+    trParent.remove();
+    if (dataId != 0) {
+        tbody.find("tr[class='font-size-13 hidden']").removeClass("hidden");
+    }
+};
+
+function fn_save_edit(element) {
+              random_color = randColor();
+          $('.div_transition').css('background', random_color);
+    var table = $(element).closest("table");
+    var saveFunctionName = table.attr("data-save");
+
+    window[saveFunctionName](element);
+};
+
+function XyLySaveTrinhDo(e) {
+            random_color = randColor();
+          $('.div_transition').css('background', random_color);
+    var element = $(e);
+    var table = element.closest("table");
+    var tbody = element.closest("tbody");
+    var trParent = element.closest("tr");
+    var dataId = trParent.attr("data-id");
+    var arrId = [];
+    var newDataId;
+    tbody.find("tr[name!='tr-edit']").each((index, obj) => {
+        var thisElement = $(obj);
+        arrId.push(thisElement.attr("data-id"));
+    });
+    if (arrId.length > 0) {
+        var maxOfArray = Math.max.apply(Math, arrId);
+        var checkExist = arrId.indexOf(dataId) > -1;
+        if (checkExist) {
+            newDataId = dataId;
+        } else {
+            newDataId = maxOfArray + 1;
+        }
+    } else {
+        newDataId = 1;
+    }
+    var objData = window.GetAllInputOnDiv(trParent);
+    if (objData) {
+        var namHienTai = window.getCurrentYear();
+        if (namHienTai < objData.name_tot_nghiep) {
+            alert("Year too big!");
+        }
+        else {
+            var html = html_Load_tbl_TrinhDo(newDataId, objData);
+            if (dataId == 0)
+                tbody.append(html);
+            else {
+                trParent.after(html);
+                tbody.find("tr[class='font-size-13 hidden']").remove();
+            }
+            trParent.remove();
+        }
+    }
+};
+
+function html_Load_tbl_TrinhDo(newDataId, objData) {
+              random_color = randColor();
+          $('.div_transition').css('background', random_color);
+    var html = "";
+    html += '<tr data-id="' + newDataId + '" class="font-size-13">';
+    html += '<td class="input-get line-height-1_1-Em" data-name="TrinhDoChuyenMonID" data-value=' + objData.id + '> ' + objData.id + ' </td>';
+ 
+    html += '<td class="input-get line-height-1_1-Em"  data-name="TenTruongDaoTao" data-value=' + objData.truong_dao_tao + '>' + objData.truong_dao_tao + ' </td>';
+     html += '<td  class="input-get line-height-1_1-Em" data-name="NamTotNghiep" data-value=' + objData.name_tot_nghiep + '>' + objData.name_tot_nghiep + '</td>';
+    html += '<td class="glyphicon glyphicon-edit cursor-pointer color-blue font-size-20 table-cell syt-edit-btn line-height-1_1-Em"';
+    html += ' data-trinhdoId="' + objData.TrinhDo + '"  data-trinh-do="' + objData.TrinhDo_Name + '" data-nam_tot_nghiep="' + objData.name_tot_nghiep + '"';
+    html += ' data-id="' + newDataId + '"  data-truong_dao_tao="' + objData.truong_dao_tao + '" title="Edit"></td>';
+    html += ' <td class="glyphicon glyphicon-trash cursor-pointer color-blue  font-size-18  position-inherit line-height-1_1-Em" title="Del"';
+    html += 'onclick="fn_Xoa_Dong(this)"></td>';
+    html += '</tr>';
+    return html;
+};
+function fn_Xoa_Dong(ev) {
+    var tr = $(ev).closest("tr");
+    var msg = "Are you sure delete this record?";
+    var notice = new PNotify
+        ({
+            title: "Warrning!",
+            text: msg,
+            icon: "glyphicon glyphicon-question-sign",
+            hide: false,
+            confirm: {
+                confirm: true
+            },
+            buttons: {
+                closer: false,
+                sticker: false
+            },
+            history: {
+                history: false
+            },
+            addclass: "stack-modal",
+            stack: { 'dir1': "down", 'dir2': "right", 'modal': true }
+        }).get().on
+        ("pnotify.confirm",
+            function () {
+                tr.remove();
+            }).on
+        ("pnotify.cancel",
+            function () {
+                return "false";
+            });
+
+};
+
+function GetAllInputOnDiv(parent) {
+    var objArr = {};
+    getValueInputText_Select2_OnDiv(objArr, parent);
+    getValueCheckboxOnDiv(objArr, parent);
+    getValueMultipleSelectOnDiv(objArr, parent);
+    return objArr;
+};
+
+function getValueCheckboxOnDiv(objArr,parent) {
+    $(':input[type="radio"]:checked', parent)
+        .not(":hidden,:disabled").each
+        ((index, obj) => {
+            var input = $(obj);
+            objArr[input.attr("name")] = input.val();
+        });
+    return objArr;
+};
+
+function getValueInputText_Select2_OnDiv(objArr, parent)
+{
+    $(':input', parent).not(":button,:radio, :submit, :reset, :hidden,:disabled")
+        .each
+        ((index, obj) => {
+            var input = $(obj);
+            var checkTonTaiClass = input.hasClass("adselect");
+            if (!checkTonTaiClass)
+                objArr[input.attr('name')] = input.val();
+            else {
+                var objData = $(obj).select2('data');
+                if (objData[0]) {
+                    var name = ($($(objData[0].element)[0]).parent().attr('name'));
+                    var id = objData[0].id;
+                    objArr[name] = isNaN(id * 1) ? "" : id * 1;
+                    objArr[name + "_Name"] = isNaN(id * 1) ? "" : objData[0].text;
+                }
+            }
+        });
+    return objArr;
+}
+
+function getValueMultipleSelectOnDiv(objArr, parent) {
+    $('.selectpicker_checkbox', parent)
+        .not(":disabled").each
+        ((index, obj) => {
+            var input = $(obj);
+            objArr[input.attr("name")] = input.val();
+        });
+    return objArr;
+};
+
+function getCurrentYear() {
+    var now = new Date();
+    return now.getFullYear();
+};
+
+</script>

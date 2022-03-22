@@ -10,16 +10,17 @@
                     <div class="card">
                         <div class="card-block">
                             <div class="card-title d-sm-flex justify-content-between align-items-center">
-                                <h2 class="mt-2" style="align-items: center;">Customer List</h2>
+                                <h2 class="mt-2" style="align-items: center;">Partner List</h2>
                             </div>
                             <div class="table-responsive m-t-40 with-360 div_transition">
                                 <table class="table table-striped table-borderless">
                                     <thead>
                                         <tr>
                                             <th>No</th>
-                                            <th>Customer</th>
-                                            <th>No. Telepon</th>
-                                            <th>Birth Date</th>
+                                            <th>Company</th>
+                                            <th>Responsible Person</th>
+                                            <th>Role</th>
+                                            <th>Contact Person</th>
                                             <th>Email</th>
                                             <th>Country</th>
                                             <th>Edit</th>

@@ -517,10 +517,6 @@ footer {
   color: #ffffff;
 }
 
-.right-side .card {
-  width: 786px;
-}
-
 .gradient_shadow {
   position: absolute;
   top: 56.5px;
@@ -1184,11 +1180,6 @@ hr {
 }
 
 .paused {
-  -webkit-animation-play-state: paused !important;
-  animation-play-state: paused !important;
-}
-
-.paused * {
   -webkit-animation-play-state: paused !important;
   animation-play-state: paused !important;
 }

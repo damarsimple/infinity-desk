@@ -2,7 +2,7 @@
 <html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
 <head>
     @include('admin.meta')
-    <title>@yield('title') | Landing Page</title>
+    <title>@yield('title') | Dashboard Admin</title>
 
     <link rel="shortcut icon" href="/images/favicon.ico">
 
@@ -17,7 +17,7 @@
     @include('admin.footer')
 
     @stack('before-script')
-    @include('includes.script')
+    @include('admin.script')
     @stack('after-script')
 </body>
 </html>

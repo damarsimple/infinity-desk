@@ -3,10 +3,9 @@
 namespace App\Http\Controllers\UserDashboard;
 
 use App\Http\Controllers\Controller;
-use App\Models\Change;
 use Illuminate\Http\Request;
 
-class ChangeController extends Controller
+class ViewController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -15,7 +14,7 @@ class ChangeController extends Controller
      */
     public function index()
     {
-        return view('pages.user.index');
+        return view('pages.user.recent-view');
     }
 
     /**
@@ -42,10 +41,10 @@ class ChangeController extends Controller
     /**
      * Display the specified resource.
      *
-     * @param  \App\Models\Change  $change
+     * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function show(Change $change)
+    public function show($id)
     {
         //
     }
@@ -53,10 +52,10 @@ class ChangeController extends Controller
     /**
      * Show the form for editing the specified resource.
      *
-     * @param  \App\Models\Change  $change
+     * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function edit(Change $change)
+    public function edit($id)
     {
         //
     }
@@ -65,10 +64,10 @@ class ChangeController extends Controller
      * Update the specified resource in storage.
      *
      * @param  \Illuminate\Http\Request  $request
-     * @param  \App\Models\Change  $change
+     * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, Change $change)
+    public function update(Request $request, $id)
     {
         //
     }
@@ -76,10 +75,10 @@ class ChangeController extends Controller
     /**
      * Remove the specified resource from storage.
      *
-     * @param  \App\Models\Change  $change
+     * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function destroy(Change $change)
+    public function destroy($id)
     {
         //
     }

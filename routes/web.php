@@ -1,8 +1,11 @@
 <?php
 
+use App\Http\Controllers\Admin\AnalyticalController;
 use App\Http\Controllers\Admin\CustomerController;
 use App\Http\Controllers\Admin\DashboardController;
 use App\Http\Controllers\Admin\PartnerController;
+use App\Http\Controllers\Admin\ReviewController as AdminReviewController;
+use App\Http\Controllers\Admin\TransactionController;
 use Illuminate\Support\Facades\Route;
 
 use App\Http\Controllers\Authorization\LoginController;
@@ -14,10 +17,14 @@ use App\Http\Controllers\Frontend\DetailController;
 
 use App\Http\Controllers\UserDashboard\CartController;
 use App\Http\Controllers\UserDashboard\ChangeController;
+use App\Http\Controllers\UserDashboard\OutletController;
 use App\Http\Controllers\UserDashboard\ProcurementController;
 use App\Http\Controllers\UserDashboard\ProductController;
 use App\Http\Controllers\UserDashboard\PromoController;
 use App\Http\Controllers\UserDashboard\ReviewController;
+use App\Http\Controllers\UserDashboard\UpdateController;
+use App\Http\Controllers\UserDashboard\ViewController;
+use App\Http\Controllers\UserDashboard\WishlistController;
 
 /*
 |--------------------------------------------------------------------------
@@ -50,15 +57,11 @@ Route::post('/register', [RegisterController::class, 'handleRegister'])->name('r
 Route::prefix('/dashboard')->group(function () {
     Route::prefix('/user')->group(function () {
         Route::prefix('/profile')->group(function () {
-            // Route::resource('profileSetting',);
-            // Route::resource('addressList',);
-            // Route::resource('payment',);
-            // Route::resource('card',);
-            // Route::resource('notification',);
-            // Route::resource('security',);
+            Route::resource('/', ChangeController::class);
         });
-        // Route::resource('wishlist',);
-        // Route::resource('outletFavorite');
+        Route::resource('wishlist', WishlistController::class);
+        Route::resource('outletFavorite', OutletController::class);
+        Route::resource('recent-view', ViewController::class);
     });
     Route::prefix('/purchase')->group(function () {
         Route::resource('carts', CartController::class);
@@ -68,7 +71,7 @@ Route::prefix('/dashboard')->group(function () {
     Route::prefix('/inbox')->group(function () {
         Route::resource('reviews', ReviewController::class);
         // Route::resource('complaints',)
-        // Route::resource('update',)
+        Route::resource('update', UpdateController::class);
     });
 });
 
@@ -81,5 +84,14 @@ Route::prefix('/admin')->group(function () {
     });
     Route::prefix('/customer')->group(function () {
         Route::resource('partner-data', PartnerController::class);
+    });
+    Route::prefix('transaction')->group(function () {
+        Route::resource('/', TransactionController::class);
+    });
+    Route::prefix('/reports')->group(function () {
+        Route::resource('analytic', AnalyticalController::class);
+    });
+    Route::prefix('/reviews')->group(function () {
+        Route::resource('/', AdminReviewController::class);
     });
 });

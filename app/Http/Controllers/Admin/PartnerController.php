@@ -14,7 +14,7 @@ class PartnerController extends Controller
      */
     public function index()
     {
-        //
+        return view('pages.admin.patner');
     }
 
     /**
