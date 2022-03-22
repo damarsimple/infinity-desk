@@ -102,84 +102,115 @@
               </div>
         </div>
         <div class="row">
-              <div class="col-lg-4 col-md-4 col-sm-12 mt-3">
-                  <div class="card card-statistic-2">
-                      <div class="card-stats">
-                          <div class="card-stats-title">
-                              "Order Statistics - "
-                              <div class="dropdown d-inline">
-                                  <a href="#" class="font-weight-600 dropdown-toggle" data-toggle="dropdown" id="orders-month">
-                                      August
-                                  </a>
-                                  <ul class="dropdown-menu dropdown-menu-sm">
-                                      <li class="dropdown-title">Select Month</li>
-                                      <li>
-                                          <a href="#" class="dropdown-item">January</a>
-                                      </li>
-                                      <li>
-                                          <a href="#" class="dropdown-item">February</a>
-                                      </li>
-                                      <li>
-                                          <a href="#" class="dropdown-item">March</a>
-                                      </li>
-                                      <li>
-                                          <a href="#" class="dropdown-item">April</a>
-                                      </li>
-                                      <li>
-                                          <a href="#" class="dropdown-item">May</a>
-                                      </li>
-                                      <li>
-                                          <a href="#" class="dropdown-item">June</a>
-                                      </li>
-                                      <li>
-                                          <a href="#" class="dropdown-item">July</a>
-                                      </li>
-                                      <li>
-                                          <a href="#" class="dropdown-item active">August</a>
-                                      </li>
-                                      <li>
-                                          <a href="#" class="dropdown-item">September</a>
-                                      </li>
-                                      <li>
-                                          <a href="#" class="dropdown-item">October</a>
-                                      </li>
-                                      <li>
-                                          <a href="#" class="dropdown-item">November</a>
-                                      </li>
-                                      <li>
-                                          <a href="#" class="dropdown-item">December</a>
-                                      </li>
-                                  </ul>
-                              </div>
-                          </div>
-                          <div class="card-stats-items">
-                              <div class="card-stats-item">
-                                <div class="card-stats-item-count">24</div>
-                                <div class="card-stats-item-label">Pending</div>
-                              </div>
-                              <div class="card-stats-item">
-                                <div class="card-stats-item-count">12</div>
-                                <div class="card-stats-item-label">Shipping</div>
-                              </div>
-                              <div class="card-stats-item">
-                                <div class="card-stats-item-count">23</div>
-                                <div class="card-stats-item-label">Completed</div>
-                              </div>
-                          </div>
-                      </div>
-                      <div class="row">
-                        <div class="card-wrap">
-                          <div class="card-header">
-                            <h4>Total Orders</h4>
-                          </div>
-                          <div class="card-body">
-                            59
-                          </div>
+            <div class="col-lg-4 col-md-4 col-sm-12 mt-3">
+                <div class="card card-statistic-2">
+                    <div class="card-stats">
+                        <div class="card-stats-title">
+                            "Order Statistics - "
+                            <div class="dropdown d-inline">
+                                <a href="#" class="font-weight-600 dropdown-toggle" data-toggle="dropdown" id="orders-month">
+                                    August
+                                </a>
+                                <ul class="dropdown-menu dropdown-menu-sm">
+                                    <li class="dropdown-title">Select Month</li>
+                                    <li>
+                                        <a href="#" class="dropdown-item">January</a>
+                                    </li>
+                                    <li>
+                                        <a href="#" class="dropdown-item">February</a>
+                                    </li>
+                                    <li>
+                                        <a href="#" class="dropdown-item">March</a>
+                                    </li>
+                                    <li>
+                                        <a href="#" class="dropdown-item">April</a>
+                                    </li>
+                                    <li>
+                                        <a href="#" class="dropdown-item">May</a>
+                                    </li>
+                                    <li>
+                                        <a href="#" class="dropdown-item">June</a>
+                                    </li>
+                                    <li>
+                                        <a href="#" class="dropdown-item">July</a>
+                                    </li>
+                                    <li>
+                                        <a href="#" class="dropdown-item active">August</a>
+                                    </li>
+                                    <li>
+                                        <a href="#" class="dropdown-item">September</a>
+                                    </li>
+                                    <li>
+                                        <a href="#" class="dropdown-item">October</a>
+                                    </li>
+                                    <li>
+                                        <a href="#" class="dropdown-item">November</a>
+                                    </li>
+                                    <li>
+                                        <a href="#" class="dropdown-item">December</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="card-stats-items">
+                            <div class="card-stats-item">
+                              <div class="card-stats-item-count">24</div>
+                              <div class="card-stats-item-label">Pending</div>
+                            </div>
+                            <div class="card-stats-item">
+                              <div class="card-stats-item-count">12</div>
+                              <div class="card-stats-item-label">Shipping</div>
+                            </div>
+                            <div class="card-stats-item">
+                              <div class="card-stats-item-count">23</div>
+                              <div class="card-stats-item-label">Completed</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                      <div class="card-wrap">
+                        <div class="card-header">
+                          <h4>Total Orders</h4>
+                        </div>
+                        <div class="card-body">
+                          59
                         </div>
                       </div>
-                  </div>
-              </div>
-              <div class="col-lg-4 col-sm-6 mb-xl-0 mb-4 mt-3">
+                    </div>
+                </div>
+                <div class="card">
+                    <a href="#">
+                        <h6 class="d-flex justify-content-between align-items-center px-3 mt-4 mb-1">Latest Reports</h6>
+                    </a>
+                    <ul class="flex-column mb-2">
+                        <li class="nav-item" style="list-style: none">
+                            <a class="nav-link" href="#">
+                              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-file-text" aria-hidden="true"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="16" y1="13" x2="8" y2="13"></line><line x1="16" y1="17" x2="8" y2="17"></line><polyline points="10 9 9 9 8 9"></polyline></svg>
+                              Current month
+                            </a>
+                        </li>
+                        <li class="nav-item" style="list-style: none">
+                            <a class="nav-link" href="#">
+                              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-file-text" aria-hidden="true"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="16" y1="13" x2="8" y2="13"></line><line x1="16" y1="17" x2="8" y2="17"></line><polyline points="10 9 9 9 8 9"></polyline></svg>
+                              Last Quarter
+                            </a>
+                        </li>
+                        <li class="nav-item" style="list-style: none">
+                            <a class="nav-link" href="#">
+                              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-file-text" aria-hidden="true"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="16" y1="13" x2="8" y2="13"></line><line x1="16" y1="17" x2="8" y2="17"></line><polyline points="10 9 9 9 8 9"></polyline></svg>
+                              Social Engagement
+                            </a>
+                        </li>
+                        <li class="nav-item" style="list-style: none">
+                            <a class="nav-link" href="#">
+                              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-file-text" aria-hidden="true"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="16" y1="13" x2="8" y2="13"></line><line x1="16" y1="17" x2="8" y2="17"></line><polyline points="10 9 9 9 8 9"></polyline></svg>
+                              Year-end Sale
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="col-lg-4 col-sm-6 mb-xl-0 mb-4 mt-3">
                   <div class="card gradient-bottom">
                       <div class="card-header">
                           <h4 class="mb-0 pr-5" style="font-size: 16px; line-height: 28px;">Top 5 Products</h4>
@@ -314,7 +345,55 @@
                           </div>
                       </div>
                   </div>
-              </div>
+            </div>
+            <div class="col-lg-4 col-md-12">
+                <div class="card card-hero">
+                  <div class="card-header">
+                    <div class="card-icon">
+                      <i class="far fa-question-circle"></i>
+                    </div>
+                    <h4>14</h4>
+                    <div class="card-description">Customers need help</div>
+                  </div>
+                  <div class="card-body p-0">
+                    <div class="tickets-list">
+                      <a href="#" class="ticket-item">
+                        <div class="ticket-title">
+                          <h4>My order hasn't arrived yet</h4>
+                        </div>
+                        <div class="ticket-info">
+                          <div>Laila Tazkiah</div>
+                          <div class="bullet"></div>
+                          <div class="text-primary">1 min ago</div>
+                        </div>
+                      </a>
+                      <a href="#" class="ticket-item">
+                        <div class="ticket-title">
+                          <h4>Please cancel my order</h4>
+                        </div>
+                        <div class="ticket-info">
+                          <div>Rizal Fakhri</div>
+                          <div class="bullet"></div>
+                          <div>2 hours ago</div>
+                        </div>
+                      </a>
+                      <a href="#" class="ticket-item">
+                        <div class="ticket-title">
+                          <h4>Do you see my mother?</h4>
+                        </div>
+                        <div class="ticket-info">
+                          <div>Syahdan Ubaidillah</div>
+                          <div class="bullet"></div>
+                          <div>6 hours ago</div>
+                        </div>
+                      </a>
+                      <a href="features-tickets.html" class="ticket-item ticket-more">
+                        View All <i class="fas fa-chevron-right"></i>
+                      </a>
+                    </div>
+                  </div>
+                </div>
+            </div>
         </div>
         <div class="row">
               <div class="col-lg-6 mb-lg-0 mb-4">
