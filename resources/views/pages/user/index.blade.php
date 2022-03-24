@@ -701,7 +701,6 @@
 
                                         <!-- CARD -->
                                         <div class="tab-pane fade" id="card" role="tabpanel" aria-labelledby="card-tab">
-
                                             <div class="card">
                                                 <div class="card-header border-bottom mb-3" style="height: 72px;">
                                                     <div class="row">
@@ -872,7 +871,7 @@
                                         </div>
 
                                         <!-- SECURITY -->
-                                        <div class="tab-pane fade" id="security" role="tabpanel"
+                                        <div class="tab-pane tab-content fade border-0" id="security" role="tabpanel"
                                             aria-labelledby="security-tab">
                                             <div class="card">
                                                 <div class="bgimg">
@@ -939,7 +938,7 @@
                                         </div>
                                     </div>
                                 </div>
-                                <div class="card-body tab-content border-0">
+                                {{-- <div class="card-body tab-content border-0">
                                     <div class="tab-pane" id="security">
                                         <div class="card">
                                             <div class="bgimg">
@@ -1036,7 +1035,7 @@
                                             }, 1000);
                                         </script>
                                     </div>
-                                </div>
+                                </div> --}}
                             </div>
                         </div>
                     </div>

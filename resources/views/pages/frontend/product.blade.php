@@ -7,14 +7,13 @@
       <h3 class="text-2xl capitalize mt-3" style="font-weight: 600;">
         Category :
       </h3>
-      <div class="dropdown">
-        <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false"></button>
-        <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
-          <li><a href="#" class="dropdown-item">Action</a></li>
-          <li><a href="#" class="dropdown-item">Another action</a></li>
-          <li><a href="#" class="dropdown-item">Something else here</a></li>
-        </ul>
-      </div>
+      <select class="form-select bg-transparent" style="width: 280px" aria-label="Filter Select">
+        <option selected disabled>~~Choose Category Below~~</option>
+        <option value="table">Meja</option>
+        <option value="chair">Kursi</option>
+        <option value="lamp">Lampu</option>
+        <option value="wallpaper">Wallpaper</option>
+      </select>
     </div>
   </div>
 </section>

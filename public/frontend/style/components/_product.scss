@@ -31,8 +31,9 @@
         color: var(--tried-text);
         margin-bottom: 0.5rem;
         font-weight: 500;
-        size: 18px;
+        // size: 18px;
         line-height: 22px;
+        font-size: 30px;
     }
 
     .card__price {
@@ -115,14 +116,14 @@
         size: 18px;
         font-weight: 300;
         text-align: initial;
-        margin-bottom: 1.25rem;
+        margin-bottom: -0.75rem;
         opacity: 0;
-        line-height: 22px;
+        line-height: 45px;
     }
 }
 
 .category__product {
-    color: #0B0B0B;
+    color: #0b0b0b;
     font-weight: 500;
     font-size: 14px;
 }
@@ -130,6 +131,10 @@
 .title__product {
     font-weight: 300;
     font-size: 14px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    max-width: 100px;
+    white-space: nowrap;
 }
 
 .owner__product {
@@ -140,7 +145,7 @@
 .price {
     font-weight: bold;
     font-size: 24px;
-    color: #AA9359;
+    color: #aa9359;
 }
 
 #product-list {
@@ -161,4 +166,7 @@
             margin: auto 0;
         }
     }
+}
+.section__details {
+    line-height: 1.2;
 }

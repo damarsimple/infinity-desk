@@ -31,25 +31,19 @@
                         <div class="flex flex-start mb-4">
                             Filter :
                             <div class="gradient-shadow">
-                                <div class="dropdown">
-                                    <button class="btn btn-secondary dropdown-toggle" type="button" data-toggle="dropdown">Date Time
-                                        <span class="caret">
-                                            <i class="fas fa-caret-circle-down"></i>
-                                        </span>
-                                    </button>
-                                    <ul class="dropdown-menu">
-                                        <li><a class="dropdown-item" href="#">All Time</a></li>
-                                        <li><a class="dropdown-item" href="#">Last Week</a></li>
-                                        <li><a class="dropdown-item" href="#">This Month</a></li>
-                                        <li><a class="dropdown-item" href="#">Last 3 Month</a></li>
-                                    </ul>
-                                </div>
+                                <select class="form-select" style="width: 63%" aria-label="Default select example">
+                                    <option selected disabled>Date Time</option>
+                                    <option value="1">All Time</option>
+                                    <option value="2">Last Week</option>
+                                    <option value="3">This Month</option>
+                                    <option value="4">Last 3 Month</option>
+                                </select>
                             </div>
                         </div>
                     </div>
                 </div>
                 <div class="col-lg-5">
-                    <div class="ms-md-auto ps-md-3 d-flex align-items-center">
+                    <div class="ms-md-auto ps-md-3 mt-4 d-flex align-items-center" style="width: 305px">
                         <div class="input-group">
                             <span class="input-group-text text-body">
                                 <i class="bi bi-search" aria-hidden="true"></i>
