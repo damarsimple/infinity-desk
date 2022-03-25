@@ -546,6 +546,11 @@ footer {
   width: 130px;
 }
 
+.removebtn {
+  margin-top: 2.5rem;
+  margin-left: 16rem;
+}
+
 .bgimg {
   height: 100%;
   background-position: center;
@@ -616,11 +621,12 @@ footer {
 
 .middle {
   position: absolute;
-  top: 50%;
+  top: 15%;
   left: 50%;
   -webkit-transform: translate(-50%, -50%);
           transform: translate(-50%, -50%);
   text-align: center;
+  color: #000;
 }
 
 hr {
@@ -792,10 +798,10 @@ hr {
 
 .bike {
   width: 600px;
-  height: 400px;
+  height: 690px;
   margin: auto;
-  margin-top: 368px;
-  position: absolute;
+  margin-top: 185px;
+  position: static;
   bottom: 0;
   left: 0;
   right: 0;
@@ -1226,6 +1232,10 @@ hr {
 
 .pedalstem .back {
   z-index: -1;
+}
+
+.tab-content .tab-pane {
+  height: 900px;
 }
 
 :root {

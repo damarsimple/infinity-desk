@@ -490,7 +490,7 @@
                                             </div>
                                             <ul class="mt-4">
                                                 <li>
-                                                    <div class="card mb-3 pt-1" style="line-height: 1.5; height:180px; width:765px;">
+                                                    <div class="card mb-3 pt-1" style="line-height: .5; height:180px; width:765px;">
                                                         <div class="card-body">
                                                             <h6>
                                                                 <strong>Rumah</strong>
@@ -592,7 +592,7 @@
                                                     </div>
                                                 </li>
                                                 <li>
-                                                    <div class="card mb-4 pt-1" style="line-height: 1.5; height:180px; width:765px;">
+                                                    <div class="card mb-4 pt-1" style="line-height: .5; height:180px; width:765px;">
                                                         <div class="card-body">
                                                             <h6><strong>Rumah</strong></h6>
                                                             <p><strong>Gawin Caskey</strong></p>
@@ -787,7 +787,7 @@
                                                                             </div>
                                                                             <div class="col-lg-5 col-xlg-6 col-md-4">
                                                                                 <div class="right mt-4" style="line-height: .85">
-                                                                                    <p style="font-size: 13px">PT.BCA (BANK CENTRAL ASIA) TBK
+                                                                                    <p style="font-size: 11px">PT.BCA (BANK CENTRAL ASIA) TBK
                                                                                     </p>
                                                                                     <h4>0353120848</h4>
                                                                                     <p>a.n<span><strong>GAWIN
@@ -798,12 +798,12 @@
                                                                         </div>
                                                                     </div>
                                                                     <div class="card-back" hidden>
-                                                                        <img src="img/bca_img.jpg" alt="BCA...">
+                                                                        <img src="{{ url('frontend/images/bca_img.jpg') }}" alt="BCA...">
                                                                     </div>
                                                                 </div>
                                                             </div>
                                                         </div>
-                                                        <div class="col">
+                                                        <div class="removebtn col">
                                                             <button class="btn btn-dark">Remove</button>
                                                         </div>
                                                     </div>

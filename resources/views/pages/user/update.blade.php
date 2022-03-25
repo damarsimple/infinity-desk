@@ -5,10 +5,10 @@
         <div class="card-header border-bottom mb-3">
             <ul class="nav nav-tabs card-header-tabs nav-fill">
                 <li class="nav-item active">
-                    <a data-toggle="tab" href="#transaction" class="nav-link active mr-1">Transaction</a>
+                    <a data-bs-toggle="tab" data-bs-target="#transaction" class="nav-link active mr-1" aria-controls="address" aria-selected="false" role="tab" >Transaction</a>
                 </li>
                 <li class="nav-item">
-                    <a data-toggle="tab" href="#update" class="nav-link mr-1">Update</a>
+                    <a data-bs-toggle="tab" data-bs-target="#update" class="nav-link mr-1" aria-controls="address" aria-selected="false" role="tab">Update</a>
                 </li>
             </ul>
         </div>
@@ -26,7 +26,7 @@
                         <h5 class="card-title">
                             You Got 50% Cashback
                             <span>
-                                <img src="img/figma-icon/confetti_major.svg" alt="..." width="15">
+                                <img src="{{ url('frontend/images/figma-icon/confetti_major.svg') }}" alt="..." width="15">
                             </span>
                         </h5>
                         <p class="card-text"> Cashback senilai 50.000 telah masuk dalam saldo kamu.</p>
