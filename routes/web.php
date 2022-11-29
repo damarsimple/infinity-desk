@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\Admin\AnalyticalController;
+use App\Http\Controllers\Admin\CategoryController as AdminCategoryController;
 use App\Http\Controllers\Admin\CustomerController;
 use App\Http\Controllers\Admin\DashboardController;
 use App\Http\Controllers\Admin\PartnerController;
@@ -10,7 +11,7 @@ use Illuminate\Support\Facades\Route;
 
 use App\Http\Controllers\Authorization\LoginController;
 use App\Http\Controllers\Authorization\RegisterController;
-
+use App\Http\Controllers\Frontend\CategoryController;
 use App\Http\Controllers\Frontend\LandingController;
 use App\Http\Controllers\Frontend\ProductsController;
 use App\Http\Controllers\Frontend\DetailController;
@@ -37,6 +38,12 @@ use App\Http\Controllers\UserDashboard\WishlistController;
 |
 */
 
+//Tes Route Livewire
+Route::middleware(['auth', 'verified'])->group(function () {
+    Route::view('home', 'home')->name('home');
+
+    Route::view('profile', 'profile')->name('profile');
+});
 
 //Route dashboard
 Route::get('/', [LandingController::class, 'index'])->name('index');
@@ -85,7 +92,7 @@ Route::prefix('/admin')->group(function () {
     Route::prefix('/customer')->group(function () {
         Route::resource('partner-data', PartnerController::class);
     });
-    Route::prefix('transaction')->group(function () {
+    Route::prefix('/transaction')->group(function () {
         Route::resource('/', TransactionController::class);
     });
     Route::prefix('/reports')->group(function () {
@@ -93,5 +100,8 @@ Route::prefix('/admin')->group(function () {
     });
     Route::prefix('/reviews')->group(function () {
         Route::resource('/', AdminReviewController::class);
+    });
+    Route::prefix('/category')->group(function () {
+        Route::resource('/', AdminCategoryController::class);
     });
 });

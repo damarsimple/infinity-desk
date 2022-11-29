@@ -28,7 +28,10 @@
     <div class="card-group mb-3">
       @foreach($chunk as $product)
       <div class="card me-lg-3">
-        <img src="{{ url('frontend/images/img_product_9.png') }}" alt="" class="card__img mb-3">
+      <a href="/details/{{ $product->id }}">
+        {{-- <img src="{{ url('frontend/images/img_product_9.png') }}" alt="" class="card__img mb-3"> --}}
+        <img src="{{ $product->images }}" alt="" class="card__img mb-3">
+      </a>
         <div class="card__data">
           <div class="card__title">{{ $product->name }}</div>
           <p class="card__description">{{ $product->description }}</p>

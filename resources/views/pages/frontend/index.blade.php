@@ -38,7 +38,7 @@
         <div class="mb-4 text-center">
             <h3 class="header">
                 Trending
-            </h3>
+             </h3>
             <h4 class="header-title">Product</h4>
         </div>
     </div>

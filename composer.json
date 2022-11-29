@@ -11,6 +11,7 @@
         "laravel/framework": "^8.75",
         "laravel/sanctum": "^2.11",
         "laravel/tinker": "^2.5",
+        "livewire/livewire": "^2.10",
         "lorisleiva/laravel-actions": "^2.1",
         "owen-it/laravel-auditing": "^12.0"
     },

@@ -2,6 +2,7 @@
 @section('content')
           <!-- START: DETAILS -->
           <main>
+            <h1>{{ $current_product[0]->name }}</h1>
             <section class="section-details-header"></section>
             <section class="section-details-content">
               <div class="container">

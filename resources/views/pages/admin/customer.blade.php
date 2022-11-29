@@ -22,11 +22,86 @@
                                             <th>Birth Date</th>
                                             <th>Email</th>
                                             <th>Country</th>
-                                            <th>Edit</th>
-                                            <th>Del</th>
+                                            <th>Action</th>
                                         </tr>
                                     </thead>
-                                    <tbody></tbody>
+                                    <tbody>
+                                        <tr>
+                                            <td>1</td>
+                                            <td>Caskey</td>
+                                            <td>082119836327</td>
+                                            <td>08 Agustus 1997</td>
+                                            <td>caskey97@gmail.com</td>
+                                            <td>Indonesia</td>
+                                            <td>
+                                                <button type="button" class="btn btn-primary" style="margin-left: 20rem;" data-toggle="modal" data-target="#editCustomer">
+                                                    Edit
+                                                </button>
+                                                <div class="modal fade" id="editCustomer" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="editCustomerLabel" aria-hidden="true">
+                                                    <div class="modal-dialog">
+                                                        <div class="modal-content">
+                                                            <div class="modal-header">
+                                                                <h5 class="modal-title" id="editCustomer">Edit Customer Data</h5>
+                                                                <button class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                                            </div>
+                                                            <div class="modal-body">
+                                                                <form action="/customer" method="POST">
+                                                                    <div class="form-group mb-3">
+                                                                        <label for=""
+                                                                            class="form-label">Customer</label>
+                                                                        <input type="text"
+                                                                            class="form-control" id=""
+                                                                            aria-describedby="">
+                                                                    </div>
+                                                                    <div class="form-group mb-3">
+                                                                        <label for=""
+                                                                            class="form-label">Phone
+                                                                            Number</label>
+                                                                        <input type="text"
+                                                                            class="form-control" id=""
+                                                                            aria-describedby="">
+                                                                    </div>
+                                                                    <div class="form-group mb-3">
+                                                                        <label for=""
+                                                                            class="form-label">Birth
+                                                                            Date</label>
+                                                                        <input type="text"
+                                                                            class="form-control" id=""
+                                                                            aria-describedby="">
+                                                                    </div>
+                                                                    <div class="form-group mb-3">
+                                                                        <label for=""
+                                                                            class="form-label">Email</label>
+                                                                        <input type="text"
+                                                                            class="form-control" id=""
+                                                                            aria-describedby="">
+                                                                    </div>
+                                                                    <div class="form-group mb-3">
+                                                                        <label for=""
+                                                                            class="form-label">Country</label>
+                                                                            <textarea input name="address" class="form-control" id="address" cols="20" rows="3" minlength="50"></textarea>
+                                                                    </div>
+                                                                    <div class="form-group mb-3">
+                                                                        <select name="status" id="status" class="form-control">
+                                                                            <option value="aktif">Aktif</option>
+                                                                            <option value="nonaktif">Non Aktif</option>
+                                                                        </select>
+                                                                    </div>
+                                                                    <div class="float-end">
+                                                                        <button type="button"
+                                                                            class="btn btn-danger"
+                                                                            data-bs-dismiss="modal">Cancel</button>
+                                                                        <button type="button"
+                                                                            class="btn btn-primary">Save</button>
+                                                                    </div>
+                                                                </form>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                    </tbody>
                                 </table>
                                 <div class="sytCleaarFix dnnClear"></div>
                             </div>

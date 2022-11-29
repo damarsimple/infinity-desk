@@ -5,6 +5,8 @@ namespace App\Http\Controllers\UserDashboard;
 use App\Http\Controllers\Controller;
 use App\Models\Change;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\DB;
 
 class ChangeController extends Controller
 {
@@ -15,7 +17,9 @@ class ChangeController extends Controller
      */
     public function index()
     {
-        return view('pages.user.index');
+        $user = Auth::user();
+        $curr_user = DB::table('users')->where('email', $user->email)->get();
+        return view('pages.user.index', compact('curr_user'));
     }
 
     /**

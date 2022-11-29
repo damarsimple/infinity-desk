@@ -64,7 +64,7 @@
               </li>
               <li>
                 @auth
-                <a href="/dashboard" class="nav-link">
+                <a href="/dashboard/user/profile/setting" class="nav-link">
                   <button class="btn-login">Hello, {{ auth()->user()->name }}</button>
                 </a>
                 @endauth

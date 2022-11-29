@@ -221,9 +221,9 @@
           </div>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="https://bootstrapdash.com/demo/polluxui-free/docs/documentation.html">
+          <a class="nav-link" href="#">
             <i class="fas fa-gavel menu-icon"></i>
-            <span class="menu-title">Auctions</span>
+            <span class="menu-title">Category</span>
           </a>
         </li>
         <li class="nav-item">

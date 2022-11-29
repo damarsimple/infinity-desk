@@ -18,7 +18,11 @@ class CreateCartsTable extends Migration
 
             $table->string('notes')->nullable();
             $table->unsignedInteger('quantity');
+            $table->string('no_invoice');
             $table->string('customization')->nullable();
+            $table->string('status_cart');
+            $table->string('status_pembayaran');
+            $table->string('status_pengiriman');
             $table->foreignId('user_id')->constrained();
             $table->foreignId('product_id')->constrained();
             $table->foreignId('procurement_id')->nullable();

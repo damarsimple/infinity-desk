@@ -8,6 +8,9 @@
     rel="stylesheet">
   <link rel="stylesheet" href="{{ url('frontend/style/main.css') }}">
 
+  @livewireStyles
+  
+  @livewireScripts
   {{-- <link rel="stylesheet" href="{{ url('frontend/admin/styles/customer/font-awesome.min.css') }}">
   <link rel="stylesheet" href="{{ url('frontend/admin/styles/customer/themify-icons.css') }}">
   <link rel="stylesheet" href="{{ url('frontend/admin/styles/customer/metisMenu.css') }}">

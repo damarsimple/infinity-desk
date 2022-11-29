@@ -57,7 +57,8 @@ class CustomerController extends Controller
      */
     public function edit($id)
     {
-        //
+        $data = array('title' => 'Edit Form');
+        return view('customer.edit', $data);
     }
 
     /**

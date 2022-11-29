@@ -80,7 +80,7 @@
                                                             <div class="col-sm-6">
                                                                 <input type="text" readonly
                                                                     class="form-control-plaintext" id="username"
-                                                                    value="" placeholder="Gawin Caskey">
+                                                                    value="" placeholder="{{ $curr_user[0]->name }}">
                                                                     <a href="#" data-unify="Link"
                                                                     data-testid="change-data-btn" font-size="12"
                                                                     class="link-cont" data-bs-toggle="modal" data-bs-target="#editUsername">
@@ -94,7 +94,7 @@
                                                                                 <button class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                                                                             </div>
                                                                             <div class="modal-body">
-                                                                                <form>
+                                                                                <form action="/setting" method="POST">
                                                                                     <div class="form-group mb-3">
                                                                                         <label for=""
                                                                                             class="form-label">Username
@@ -147,7 +147,7 @@
                                                                                 <button class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                                                                             </div>
                                                                             <div class="modal-body">
-                                                                                <form>
+                                                                                <form action="/setting" method="POST">
                                                                                     <div class="form-group mb-3">
                                                                                         <label for=""
                                                                                             class="form-label">Sex
@@ -186,7 +186,7 @@
                                                                 <input type="email" readonly
                                                                     class="form-control-plaintext"
                                                                     id="exampleFormControlInput" value=""
-                                                                    placeholder="afiysan1618@gmail.com">
+                                                                    placeholder="{{ $curr_user[0]->email }}">
                                                             </div>
                                                         </div>
                                                         <div class="content-sec mb-3 row">
@@ -210,7 +210,7 @@
                                                                                 <button class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                                                                             </div>
                                                                             <div class="modal-body">
-                                                                                <form>
+                                                                                <form action="/setting" method="POST">
                                                                                     <div class="form-group mb-3">
                                                                                         <label for=""
                                                                                             class="form-label">Phone Number
@@ -258,7 +258,7 @@
                                                                                 <button class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                                                                             </div>
                                                                             <div class="modal-body">
-                                                                                <form>
+                                                                                <form action="/setting" method="POST">
                                                                                     <div class="form-group mb-3">
                                                                                         <label for=""
                                                                                             class="form-label">Country
@@ -301,7 +301,7 @@
                                                                                 <button class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                                                                             </div>
                                                                             <div class="modal-body">
-                                                                                <form>
+                                                                                <form action="/setting" method="POST">
                                                                                     <div class="form-group mb-3">
                                                                                         <label for=""
                                                                                             class="form-label">Language
@@ -349,7 +349,7 @@
                                                                                 <button class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                                                                             </div>
                                                                             <div class="modal-body">
-                                                                                <form>
+                                                                                <form action="/setting" method="POST">
                                                                                     <div class="form-group mb-3">
                                                                                         <label for=""
                                                                                             class="form-label">Currency
@@ -422,7 +422,7 @@
                                                                 <button class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                                                             </div>
                                                             <div class="modal-body">
-                                                                <form>
+                                                                <form action="/setting" method="POST">
                                                                     <div class="form-group mb-3">
                                                                         <label for=""
                                                                             class="form-label">Receiver
@@ -496,7 +496,8 @@
                                                                 <strong>Rumah</strong>
                                                                 <span class="badge bg-light text-dark">Primary</span>
                                                             </h6>
-                                                            <p><strong>Gawin Caskey</strong></p>
+                                                            {{-- <p><strong>Gawin Caskey</strong></p> --}}
+                                                            <p><strong>{{ $curr_user[0]->name }}</strong></p>
                                                             <p>0826699079</p>
                                                             <p>Villa Balaraja blok C9 No.5</p>
 
@@ -523,7 +524,7 @@
                                                                                 aria-label="Close"></button>
                                                                         </div>
                                                                         <div class="modal-body">
-                                                                            <form>
+                                                                            <form action="/setting" method="POST">
                                                                                 <div class="form-group mb-3">
                                                                                     <label for=""
                                                                                         class="form-label">Label
@@ -622,7 +623,7 @@
                                                                                 aria-label="Close"></button>
                                                                         </div>
                                                                         <div class="modal-body">
-                                                                            <form>
+                                                                            <form action="/setting" method="POST">
                                                                                 <div class="form-group mb-3">
                                                                                     <label for=""
                                                                                         class="form-label">Label
@@ -730,7 +731,7 @@
                                                                     data-bs-dismiss="modal" aria-label="Close"></button>
                                                             </div>
                                                             <div class="modal-body">
-                                                                <form>
+                                                                <form action="/setting" method="POST">
                                                                     <div class="flexbox">
                                                                         <div class="inputBox">
                                                                             <span>Bank Name</span>
