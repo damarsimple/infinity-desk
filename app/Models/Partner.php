@@ -11,6 +11,8 @@ class Partner extends Model
     use HasFactory, SoftDeletes;
 
     protected $fillable = [
-        'company', 'name', 'role', 'phone'
+        'company', 'responsible_person', 'role', 'contact_person', 'email',  'country', 'status'
     ];
+
+    protected $dates = ['deleted_at'];
 }

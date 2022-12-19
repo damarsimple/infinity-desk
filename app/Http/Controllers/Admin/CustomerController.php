@@ -1,9 +1,13 @@
-<?php
+7k<?php
 
 namespace App\Http\Controllers\Admin;
 
 use App\Http\Controllers\Controller;
+use App\Models\Customer;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\DB;
+use Illuminate\Support\Facades\Validator;
 
 class CustomerController extends Controller
 {
@@ -44,7 +48,7 @@ class CustomerController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function show($id)
+    public function show($no)
     {
         //
     }
@@ -55,10 +59,11 @@ class CustomerController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function edit($id)
+    public function edit($no)
     {
-        $data = array('title' => 'Edit Form');
-        return view('customer.edit', $data);
+        $model = DB::table('customers')->where('no', $no)->first();
+
+        return view('customers.edit', compact('model'));
     }
 
     /**

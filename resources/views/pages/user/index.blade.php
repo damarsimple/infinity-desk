@@ -94,7 +94,7 @@
                                                                                 <button class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                                                                             </div>
                                                                             <div class="modal-body">
-                                                                                <form action="/setting" method="POST">
+                                                                                <form action="/setting/edit_name" method="POST">
                                                                                     <div class="form-group mb-3">
                                                                                         <label for=""
                                                                                             class="form-label">Username
@@ -131,7 +131,7 @@
                                                             <label for="sex"
                                                                 class="name-data col-sm-2 col-form-label">Sex</label>
                                                             <div class="col-sm-6">
-                                                                <input type="text" readonly
+                                                              <input type="text" readonly
                                                                     class="form-control-plaintext" id="sex" value=""
                                                                     placeholder="Male">
                                                                 <a href="#" data-unify="Link"
@@ -147,7 +147,7 @@
                                                                                 <button class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                                                                             </div>
                                                                             <div class="modal-body">
-                                                                                <form action="/setting" method="POST">
+                                                                                <form action="/setting/edit_sex" method="POST">
                                                                                     <div class="form-group mb-3">
                                                                                         <label for=""
                                                                                             class="form-label">Sex
@@ -210,7 +210,7 @@
                                                                                 <button class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                                                                             </div>
                                                                             <div class="modal-body">
-                                                                                <form action="/setting" method="POST">
+                                                                                <form action="/setting/edit_phone" method="POST">
                                                                                     <div class="form-group mb-3">
                                                                                         <label for=""
                                                                                             class="form-label">Phone Number
@@ -258,7 +258,7 @@
                                                                                 <button class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                                                                             </div>
                                                                             <div class="modal-body">
-                                                                                <form action="/setting" method="POST">
+                                                                                <form action="/setting/edit_country" method="POST">
                                                                                     <div class="form-group mb-3">
                                                                                         <label for=""
                                                                                             class="form-label">Country
@@ -301,7 +301,7 @@
                                                                                 <button class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                                                                             </div>
                                                                             <div class="modal-body">
-                                                                                <form action="/setting" method="POST">
+                                                                                <form action="/setting/edit_language" method="POST">
                                                                                     <div class="form-group mb-3">
                                                                                         <label for=""
                                                                                             class="form-label">Language
@@ -336,7 +336,7 @@
                                                                         <i class="bi bi-currency-dollar"></i>
                                                                     </button>
                                                                 </div>
-                                                                <a href="#" data-unify="Link"
+                                                                {{-- <a href="#" data-unify="Link"
                                                                     data-testid="change-data-btn" font-size="12"
                                                                     class="link-cont" data-bs-toggle="modal" data-bs-target="#editCurrency">
                                                                     Edit
@@ -393,7 +393,7 @@
                                                                             </div>
                                                                         </div>
                                                                     </div>
-                                                                </div>
+                                                                </div> --}}
                                                             </div>
                                                         </div>
                                                     </form>
@@ -422,7 +422,7 @@
                                                                 <button class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                                                             </div>
                                                             <div class="modal-body">
-                                                                <form action="/setting" method="POST">
+                                                                <form action="/setting/add_address" method="POST">
                                                                     <div class="form-group mb-3">
                                                                         <label for=""
                                                                             class="form-label">Receiver
@@ -524,7 +524,7 @@
                                                                                 aria-label="Close"></button>
                                                                         </div>
                                                                         <div class="modal-body">
-                                                                            <form action="/setting" method="POST">
+                                                                            <form action="/setting/edit_address" method="POST">
                                                                                 <div class="form-group mb-3">
                                                                                     <label for=""
                                                                                         class="form-label">Label
@@ -731,7 +731,7 @@
                                                                     data-bs-dismiss="modal" aria-label="Close"></button>
                                                             </div>
                                                             <div class="modal-body">
-                                                                <form action="/setting" method="POST">
+                                                                <form action="/setting/add_bank" method="POST">
                                                                     <div class="flexbox">
                                                                         <div class="inputBox">
                                                                             <span>Bank Name</span>

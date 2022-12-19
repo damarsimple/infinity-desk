@@ -3,6 +3,9 @@
 namespace App\Http\Controllers\Admin;
 
 use App\Http\Controllers\Controller;
+use Illuminate\Support\Facades\DB;
+use Illuminate\Support\Facades\Validator;
+use App\Models\Category;
 use Illuminate\Http\Request;
 
 class CategoryController extends Controller
@@ -14,7 +17,9 @@ class CategoryController extends Controller
      */
     public function index()
     {
-        return view('pages.admin.category');
+        $datas = DB::table('categories')->get();
+
+        return view('pages.admin.category', compact('datas'));
     }
 
     /**
@@ -24,8 +29,9 @@ class CategoryController extends Controller
      */
     public function create()
     {
+
         $data = array('title' => 'Form Kategori');
-        return view('category.create', $data);
+        return view('categories.create', $data);
     }
     /**
      * Store a newly created resource in storage.
@@ -35,16 +41,36 @@ class CategoryController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        Validator::make(
+            $request->all(),
+            [
+                'code' => 'required',
+                'name' => 'required',
+                'total_product' => 'required',
+            ]
+        )
+            ->validate();
+
+        DB::table('categories')->insert(
+            [
+                'code' => $request->code,
+                'name' => $request->name,
+                'total_product' => $request->total_product,
+            ]
+        );
+
+        return redirect(
+            $request->has('redirectTo') ? $request->get('redirectTo') : 'admin/category/category-list'
+        );
     }
 
     /**
      * Display the specified resource.
      *
-     * @param  int  $id
+     * @param  int  $no
      * @return \Illuminate\Http\Response
      */
-    public function show($id)
+    public function show($no)
     {
         //
     }
@@ -52,35 +78,59 @@ class CategoryController extends Controller
     /**
      * Show the form for editing the specified resource.
      *
-     * @param  int  $id
+     * @param  int  $no
      * @return \Illuminate\Http\Response
      */
-    public function edit($id)
+    public function edit($no)
     {
         $data = array('title' => 'Form Edit Kategori');
-        return view('category.edit', $data);
+        return view('categories.edit', $data);
     }
 
     /**
      * Update the specified resource in storage.
      *
      * @param  \Illuminate\Http\Request  $request
-     * @param  int  $id
+     * @param  int  $no
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, $id)
+    public function update(Request $request, $no)
     {
-        //
+        Validator::make(
+            $request->all(),
+            [
+                'code' => 'required',
+                'name' => 'required',
+                'total-product' => 'required',
+            ]
+        )
+            ->validate();
+
+        DB::table('category')->insert(
+            [
+                'code' => $request->code,
+                'name' => $request->name,
+                'total_product' => $request->total_product,
+            ]
+        );
+
+        return redirect(
+            $request->has('redirectTo') ? $request->get('redirectTo') : 'admin/category/category-list'
+        );
     }
 
     /**
      * Remove the specified resource from storage.
      *
-     * @param  int  $id
+     * @param  int  $no
      * @return \Illuminate\Http\Response
      */
-    public function destroy($id)
+    public function destroy(Request $request, $no)
     {
-        //
+        DB::table('Categories')->where('idcategory', $no)->delete();
+
+        return redirect(
+            $request->has('redirectTo') ? $request->get('redirectTo') : 'admin/category/category-list'
+        );
     }
 }

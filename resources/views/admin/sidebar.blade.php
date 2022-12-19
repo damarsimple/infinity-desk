@@ -221,10 +221,16 @@
           </div>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="#">
-            <i class="fas fa-gavel menu-icon"></i>
+          <a class="nav-link" data-toggle="collapse" href="#form-elements" aria-expanded="false" aria-controls="form-elements">
+            <i class="bi bi-tags-fill menu-icon"></i>
             <span class="menu-title">Category</span>
+            <i class="bi bi-plus-circle-fill menu-arrow"></i>
           </a>
+          <div class="collapse" id="form-elements">
+            <ul class="nav flex-column sub-menu">
+              <li class="nav-item"><a class="nav-link" href="{{ route('category-list.index') }}">Category List</a></li>
+            </ul>
+          </div>
         </li>
         <li class="nav-item">
           <a class="nav-link" data-toggle="collapse" href="#error" aria-expanded="false" aria-controls="error">

@@ -16,9 +16,12 @@ class CreatePartnersTable extends Migration
         Schema::create('partners', function (Blueprint $table) {
             $table->id();
             $table->string('company');
-            $table->string('name');
+            $table->string('responsible_person');
             $table->string('role');
-            $table->string('phone');
+            $table->string('contact_person');
+            $table->string('email')->unique();
+            $table->string('country');
+            $table->string('status');
 
             $table->softDeletes();
             $table->timestamps();

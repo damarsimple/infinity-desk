@@ -38,6 +38,46 @@ use App\Http\Controllers\UserDashboard\WishlistController;
 |
 */
 
+Route::get('/category-list', 'CategoryController@index');
+Route::get('/category-list', 'CategoryController@create');
+Route::get('/category-list', 'CategoryController@store');
+Route::get('/category-list', 'CategoryController@edit');
+Route::get('/category-list', 'CategoryController@update');
+Route::get('/category-list', 'CategoryController@destroy');
+Route::get('/partner-data', 'PartnerController@index');
+Route::get('/partner-data', 'PartnerController@create');
+Route::get('/partner-data', 'PartnerController@store');
+Route::get('/partner-data', 'PartnerController@edit');
+Route::get('/partner-data', 'PartnerController@update');
+Route::get('/partner-data', 'PartnerController@destroy');
+Route::get('/customer-data', 'CustomerController@index');
+Route::get('/customer-data', 'CustomerController@edit');
+Route::get('/customer-data', 'CustomerController@update');
+Route::get('/setting', 'ChangeController@index');
+Route::get('/setting', 'ChangeController@create_address');
+Route::get('/setting', 'ChangeController@create_card');
+Route::get('/setting', 'ChangeController@store_address');
+Route::get('/setting', 'ChangeController@store_card');
+Route::get('/setting', 'ChangeController@edit_name');
+Route::get('/setting', 'ChangeController@edit_email');
+Route::get('/setting', 'ChangeController@edit_address');
+Route::get('/setting', 'ChangeController@edit_bd');
+Route::get('/setting', 'ChangeController@edit_sex');
+Route::get('/setting', 'ChangeController@edit_pn');
+Route::get('/setting', 'ChangeController@edit_country');
+Route::get('/setting', 'ChangeController@edit_language');
+Route::get('/setting', 'ChangeController@update_name');
+Route::get('/setting', 'ChangeController@update_email');
+Route::get('/setting', 'ChangeController@update_address');
+Route::get('/setting', 'ChangeController@update_bd');
+Route::get('/setting', 'ChangeController@update_sex');
+Route::get('/setting', 'ChangeController@update_pn');
+Route::get('/setting', 'ChangeController@update_country');
+Route::get('/setting', 'ChangeController@update_localization');
+Route::get('/setting', 'ChangeController@destroy_address');
+Route::get('/setting', 'ChangeController@destroy_card');
+
+
 //Tes Route Livewire
 Route::middleware(['auth', 'verified'])->group(function () {
     Route::view('home', 'home')->name('home');
@@ -89,7 +129,7 @@ Route::prefix('/admin')->group(function () {
     Route::prefix('/customer')->group(function () {
         Route::resource('customer-data', CustomerController::class);
     });
-    Route::prefix('/customer')->group(function () {
+    Route::prefix('/partner')->group(function () {
         Route::resource('partner-data', PartnerController::class);
     });
     Route::prefix('/transaction')->group(function () {
@@ -102,6 +142,6 @@ Route::prefix('/admin')->group(function () {
         Route::resource('/', AdminReviewController::class);
     });
     Route::prefix('/category')->group(function () {
-        Route::resource('/', AdminCategoryController::class);
+        Route::resource('category-list', AdminCategoryController::class);
     });
 });
