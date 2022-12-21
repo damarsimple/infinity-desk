@@ -6,13 +6,14 @@ use App\Http\Controllers\Admin\DashboardController;
 use App\Http\Controllers\Admin\PartnerController;
 use App\Http\Controllers\Admin\ReviewController as AdminReviewController;
 use App\Http\Controllers\Admin\TransactionController;
+use App\Http\Controllers\Admin\ProductsController;
 use Illuminate\Support\Facades\Route;
 
 use App\Http\Controllers\Authorization\LoginController;
 use App\Http\Controllers\Authorization\RegisterController;
 
 use App\Http\Controllers\Frontend\LandingController;
-use App\Http\Controllers\Frontend\ProductsController;
+// use App\Http\Controllers\Frontend\ProductsController;
 use App\Http\Controllers\Frontend\DetailController;
 
 use App\Http\Controllers\UserDashboard\CartController;
@@ -58,6 +59,7 @@ Route::prefix('/dashboard')->group(function () {
     Route::prefix('/user')->group(function () {
         Route::prefix('/profile')->group(function () {
             Route::resource('setting', ChangeController::class);
+            Route::post('save-address', [ChangeController::class, 'saveAddress'])->name('save-address');
         });
         Route::resource('wishlist', WishlistController::class);
         Route::resource('outletFavorite', OutletController::class);
@@ -81,6 +83,9 @@ Route::prefix('/admin')->group(function () {
     });
     Route::prefix('/customer')->group(function () {
         Route::resource('customer-data', CustomerController::class);
+    });
+    Route::prefix('/products')->group(function () {
+        Route::resource('products-data', ProductsController::class);
     });
     Route::prefix('/customer')->group(function () {
         Route::resource('partner-data', PartnerController::class);

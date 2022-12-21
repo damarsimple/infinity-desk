@@ -33,7 +33,7 @@ class Pivot extends Migration
             Schema::create($this->getTableName($schema), function (Blueprint $table) use ($schema) {
                 $table->id();
                 foreach ($schema['key'] as $key) {
-                    $table->foreignId($key . '_id')->constrained();
+                    $table->foreignId($key . '_id')->constrained()->onDelete('cascade');
                 }
 
                 $table->timestamps();

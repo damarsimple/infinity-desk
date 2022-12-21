@@ -182,6 +182,18 @@
           </div>
         </li>
         <li class="nav-item">
+          <a class="nav-link" data-toggle="collapse" href="#form-elements" aria-expanded="false" aria-controls="form-elements">
+            <i class="far fa-handshake menu-icon"></i>
+            <span class="menu-title">Products</span>
+            <i class="bi bi-plus-circle-fill menu-arrow"></i>
+          </a>
+          <div class="collapse" id="form-elements">
+            <ul class="nav flex-column sub-menu">
+              <li class="nav-item"><a class="nav-link" href="{{ route('products-data.index') }}">Products List</a></li>
+            </ul>
+          </div>
+        </li>
+        <li class="nav-item">
           <a class="nav-link" data-toggle="collapse" href="#charts" aria-expanded="false" aria-controls="charts">
             <i class="bi bi-receipt menu-icon"></i>
             <span class="menu-title">Transactions</span>
